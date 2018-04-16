@@ -1,0 +1,152 @@
+@media (max-width: 1199px) {
+	/*Eventos*/
+	.data-item-mural{
+		font-size: 12px;
+	}
+	.titulo-noticias-pag{
+		font-size: 32px;
+	}
+	.img-galeria{
+		height: 120px;
+	}
+	
+
+}
+
+@media (max-width: 991px){
+	/*Menu Gov*/
+    .midias ul, .midias li{
+		margin-bottom: 0px;
+	}
+    .links ul li a{
+		padding: 0px;
+		font-size: 10px;
+    }
+	.div-label {
+		margin-top: -10px;
+		font-size: 15px;
+	}
+	/*mais noticias*/
+	div.mais-noticias{
+		margin-bottom: -15px;
+		font-size: 15px;
+		width: 100px;
+	}
+	/*Eventos*/
+	.data-item-mural{
+		font-size: 10px;
+		margin-bottom: 1px;
+	}
+	.item-mural{
+		margin: 6px 5px 10px 5px;
+	}
+
+	.titulo-noticias-pag{
+		font-size: 20px;
+	}
+
+	.chamada-noticias-pag{
+		font-size: 13px;
+	}
+
+	.data-noticia{
+		font-size: 13px;
+	}
+	.canal{
+		border: none;
+		margin-bottom: 20px;
+	}
+	.form-videos{
+		margin-top: 0px;
+	}
+
+}
+
+@media (max-width: 767px){
+	/*Menu Gov*/
+    .transparencia{
+    	display: none;
+    }
+    .links ul li a{
+		font-size: 13px;
+    }
+    .h1-escola{
+		font-size: 15px;
+    }
+    .slogan{
+    	font-size: 10px;
+    }
+    .icone-galeria{
+		font-size: 100px;
+		text-align: center;
+		padding: 30px 0px;
+	}
+	img.icone-galeria{
+		height: 161px;
+	}
+	/*Noticias*/
+	.titulo-noticia{
+		font-size: 13px;
+	}
+	.chamada-noticia{
+		font-size: 10px;
+	}
+	.hr-noticia{
+		width: 35px;
+		height: 3px;
+	}
+	/*mural*/
+	.mural{
+		margin-top: 20px;
+	}
+	.titulo-noticias-pag{
+		max-height: 65px;
+		overflow: hidden;
+	}
+	.chamada-noticias-pag{
+		text-align: justify;
+		padding: 10px 0px;
+	}
+	.btn-galeria{
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 575px) { 
+	/*Menu Gov*/
+	
+	.video-galeria-xs{
+		margin: 0 auto;
+	}
+	.menu-gov, .midias, .links, .contato-escola{
+    	text-align: center;
+    }
+    
+	.galeria-top{
+		margin-top: 20px;
+	}
+	.xs-noticia{
+		max-width: 50%;
+	}
+	/*Noticias*/
+	.titulo-noticia{
+		width: 75%;
+		font-size: 12px;
+	}
+	.chamada-noticia{
+		font-size: 9px;
+	}
+	.hr-noticia{
+		width: 30px;
+		height: 2px;
+	}
+	.img-noticias{
+		display: block;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.img-noticias img{
+		width: 40%;
+	}
+	
+}

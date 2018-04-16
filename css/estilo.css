@@ -1,0 +1,598 @@
+@import url(https://fonts.googleapis.com/css?family=Homenaje);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower');
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 50px;
+}
+.menu-gov{
+    background: url('../imagens/menu/pattern-topo.png') repeat #FFF;
+    border-top-style: solid;
+    border-top-color: green;
+    border-top-width: 3px;
+    padding: 5px 0px;
+}
+
+.midias, .links{
+    text-align:right;
+}
+.midias ul{
+	margin-bottom: 12px;
+	padding-left: 4px;
+}
+.midias ul li{
+    display: inline-block;
+	padding: 0px 5px;
+}
+.links ul{
+	margin: 0;
+	padding-left: 4px;
+}
+.links ul li{
+	display: inline-block;
+}
+.links ul li a{
+	display:inline-block;
+	color: #009247;
+	text-transform: uppercase;
+	font-family: 'Homenaje';
+	font-weight: 300;
+	padding:0 2px;
+	font-size: 15px;
+	text-decoration:none;
+}
+.links ul li a:hover{
+	font-weight: 800;
+}
+
+/*Rodape*/
+.rodape{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+	margin-top: 20px;
+	background-color: rgb(240,240,240);
+}
+
+.texto-rodape{
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	color: rgb(72, 68, 68);
+	text-align: center;
+	font-weight: 400;
+	padding: 10px;
+	margin: 0;
+}
+/*contato escola*/
+.contato-escola{
+	background-color: rgb(55,119,186);
+}
+.midias-escola ul{
+	margin: 0;
+}
+.numero-contato{
+	color: white;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-family: 'Roboto', sans-serif;
+	padding: 15px 0px 0px 0px;
+}
+.ddd{
+	font-size: 10px;
+}
+.icon-midia{
+	background-color: white;
+	padding: 7px;
+	margin: 6px 0px;
+	width: 30px;
+	text-align: center;
+	border-radius: 20px;
+}
+/*slogan escola*/
+.slogan-escola{
+	text-align: center;
+	vertical-align: middle;
+
+}
+.logo-escola{
+	max-height: 60px;
+	margin: 10px 0px;
+}
+.centro-vertical{
+	display : flex;
+  	align-items : center;
+}
+.slogan, .h1-escola{
+	font-family: 'Dancing Script', cursive;
+	margin: 10px 0px;
+}
+
+/*menu escola*/
+.menu-escola{
+	background-color: rgb(240,240,240);
+}
+
+.text-expanded {
+  	letter-spacing: 2px;
+}
+
+.active, .text-expanded:hover {
+  	font-weight: bold;
+  	letter-spacing: 1px;
+}
+
+/*Carrosel*/
+.navegacao{
+	padding: 10px 0px;
+	font-size: 12px;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: rgb(72, 68, 68);
+	font-weight: 700;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+/*noticias*/
+.border-gray {
+	border: 1px solid rgba(151, 151, 151, .3);
+
+}
+
+/*divLabel*/
+.div-label {
+	margin-top: -15px;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	left: 50%;
+	display: table;
+	width: -moz-max-content;
+	position: absolute;
+	transform: translateX(-50%);
+	text-transform: none;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	color: #3777BA;
+}
+/*Noticias*/
+.noticias{
+	margin-top: 20px;
+	text-align: center;
+}
+
+div.mais-noticias{
+	margin-bottom: -15px;
+	bottom: 5px;
+	line-height: 30px;
+	border-left: 10px solid transparent;
+  	border-bottom: 30px solid #3777BA;
+	right: 5px;;
+	width: 135px;
+	position: absolute;
+	text-transform: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+a.mais-noticias-link{
+	width: 100%;
+	color: white;
+	margin: 0 0 0 0px;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+/*Eventos*/
+.mural{
+	display: grid;
+}
+.item-mural{
+	width: auto;
+	margin: 12px 5px 10px 5px;
+	padding: 4px;
+}
+
+.data-item-mural{
+	text-align: center;
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+}
+
+.imagem-noticia {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagem-noticia img {
+	width: 100%;
+	height: auto;
+	display: block;
+	opacity: 1;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.imagem-noticia:hover img{
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.imagem-noticia:after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: opacity .3s ease;
+      opacity: 0;
+}
+.cartao-noticia {
+    position: relative;
+    will-change: transform;
+    transition: box-shadow .3s ease;
+    box-shadow: 0 10px 30px transparent;
+}
+
+.noticia:hover .cartao-noticia {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.noticia:hover .imagem-noticia:after {
+    opacity: 1; 
+ }
+
+.noticia:hover .titulo-noticia, .noticia:hover .hr-noticia, .noticia:hover .chamada-noticia {
+    -webkit-transform: translateY(0) scale(1);
+        -ms-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+}
+.detalhes-noticia {
+    position: absolute;
+    top: 0px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    pointer-events: none;
+    -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+    transition: border .4s ease;
+}
+
+.titulo-noticia {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px;
+    color: white;
+    margin: 35px 0px 10px 35px;
+    text-transform: uppercase;
+    transition: .4s ease;
+    opacity: .7;
+    -webkit-transform: translate(5px, 5px) scale(1);
+        -ms-transform: translate(5px, 5px) scale(1);
+            transform: translate(5px, 5px) scale(1);
+    will-change: transform;
+}
+.hr-noticia{
+	width: 45px;
+	height: 4px;
+	background-color: #3777ba;
+	border: 1px solid #3777ba;
+    margin: 0px 0 0 35px;
+    transition: .4s ease;
+    opacity: .5;
+    -webkit-transform: translate(5px, 5px) scale(0.8);
+        -ms-transform: translate(5px, 5px) scale(0.8);
+            transform: translate(5px, 5px) scale(0.8);
+    will-change: transform;
+}
+.chamada-noticia{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 16px;
+    margin: 20px 0 40px 35px;
+    width: 80%;
+    transition: .4s ease;
+    opacity: 0;
+    color: white;
+    -webkit-transform: translate(34px, 25px) scale(0.8);
+        -ms-transform: translate(34px, 25px) scale(0.8);
+            transform: translate(34px, 25px) scale(0.8);
+    will-change: transform;
+
+}
+
+
+/*Banner Promocional*/
+.banner-promocional{
+	margin-top: 20px;
+}
+
+/*galerias*/
+.galeria{
+	margin-top: 20px;
+	text-align: center;
+}
+.icone-galeria{
+	font-size: 150px;
+	color:rgba(55, 119, 186, 0.69);
+	padding: 50px 0px;
+	transform: scale(.9);
+}
+img.icone-galeria{
+	height: 250px;
+}
+.icone-galeria:hover{
+	transform: scale(1);
+	color:rgb(55, 119, 186);
+}
+
+
+/*equipe*/
+.cartao-equipe{
+	margin: 20px 0px;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #3777ba;
+	border-radius: 0px;
+}
+.cartao-equipe:hover, .cartao-equipe.equipe-ativa{
+	background-color: rgba(196, 192, 192, 0.1);
+}
+
+.cartao-equipe i{
+	font-size: 30px;
+}
+.banner-equipe{
+	margin-top: 15px;
+}
+
+.img-equipe{
+	margin-top: 20px;
+}
+.img-circle{
+	border-radius: 100px;
+}
+
+.parte-equipe{
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.nome-equipe{
+	color: gray;
+	margin-top: 10px;
+	color: #3777ba;
+}
+.funcao-equipe{
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: rgb(151, 151, 151);
+}
+.formacao-equipe{
+	font-size: 12px;
+	color: rgb(151, 151, 151);
+}
+
+.institucional{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.texto-institucional{
+	padding: 30px;
+	text-align: center;
+	font-size: large;
+	color: gray;
+	font-family: 'Roboto';
+}
+.historico{
+	text-indent: 50px;
+	text-align: justify;
+	padding-bottom: 0px;
+}
+.alteracao{
+	text-indent: 0px;
+	text-decoration: underline;
+	font-size: small;
+	color: black;
+	text-align: center;
+}
+
+#mapa{
+	width: 100%;
+	margin-top: 15px;
+	height: 300px;
+}
+
+.no-radius{
+	border-radius: 0px;
+}
+
+.btn-contato{
+	background-color: #3777ba;
+	margin: 15px 0px;
+}
+
+.label-contato{	
+	margin-top: 10px;
+	color: rgb(72, 68, 68);
+	font-weight: 500;
+}
+.span-contato{
+	font-size: 14px;
+}
+.midias-contato{
+	text-align: left;
+}
+.midias-contato .icon-midia{
+	color: white;
+	background-color: #3777ba;
+	margin-right: 10px;
+}
+.midias-contato ul li, .midias-contato ul{
+	padding: 0;
+}
+
+.pag-noticias{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.card-pag-noticias{
+	padding: 30px;
+}
+
+.data-noticia{
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	color: rgb(167, 164, 164);
+}
+
+.hr-noticias-pag{
+	margin: 0 30px;
+}
+.titulo-noticias-pag{
+	color: rgb(72, 68, 68);
+	text-align: justify;
+	font-size: 30px;
+}
+
+.link-noticias-pag:hover{
+	text-decoration-color: rgb(72, 68, 68);
+}
+
+.chamada-noticias-pag{
+	color: rgb(109, 106, 106);
+	padding: 20px 0px 15px 0px;
+	font-size: 15px;
+	text-align: justify;
+	font-family: 'Roboto';
+	font-weight: 100;
+	overflow: hidden;
+}
+.figure-noticia{
+	margin: 0 auto;
+}
+.data-noticia-individual{
+	color: rgb(167, 164, 164);
+	float: right;	
+}
+.img-noticias img{
+	filter: opacity(60%);
+}
+
+.img-noticias img:hover{
+	filter: opacity(100%);
+}
+.hr-noticia-individual{
+	width: 100%;
+	margin: 5px 15px;
+}
+.figure-noticia figcaption{
+	background-color: rgb(240,240,240);
+	font-size: 13px;
+	text-align: center;
+	font-family: 'Roboto';
+	overflow: hidden;
+}
+
+.link-mais-noticias{
+	float: right;
+	margin: 10px 15px 0px;
+}
+
+.box-padrao{
+	padding: 20px 30px 0px 30px;
+}
+
+.btn-galeria{
+	background-color: #3777ba;
+}
+.img-galeria{
+	width: 100%;
+	margin-bottom: 30px;
+	height: 120px;
+}
+
+.video-galeria{
+	margin-bottom: 30px;
+	padding: 5px;
+	height: 220px;
+	text-align: justify;
+	overflow: hidden;
+	border: 1px solid rgba(151, 151, 151, .3);
+}
+
+.video-galeria a i{
+	text-align: center;
+	font-size: 100px;
+	display: block;
+	padding-top: 10px;
+	color: #3777ba;
+}
+.video-galeria a:hover{
+	text-decoration: none;
+}
+.video-galeria a i:hover{
+	color: rgb(181, 60, 60);
+}
+
+.video-galeria a span{
+	color: rgb(167, 164, 164);
+	font-size: 12px;
+	font-family: 'Roboto';
+}
+
+.form-videos{
+	margin-top: 20px;
+}
+.canal{
+	margin: 0 auto;
+	text-align: center;
+	border-left: 1px solid rgba(151, 151, 151, .3);
+}
+
+.inscricao{
+	margin: 0;
+}
+
+.canal p{
+	color: #3777ba;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+.box-padrao form{
+	border-bottom: 1px solid rgba(151, 151, 151, .3);
+	margin-bottom: 20px;
+}
+
+.titulo-artigo{
+	margin-top: 10px;
+	text-align: center;
+}
+.resumo-artigo{
+	text-align: justify;
+}
+.btn-artigo{
+	margin-bottom: 10px;
+}
