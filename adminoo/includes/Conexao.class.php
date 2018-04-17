@@ -1,11 +1,4 @@
-﻿<?php
-	/**
-	 * Classe de conexão ao banco de dados usando PDO no padrão Singleton.
-	 * Modo de Usar:
-	 * require_once './Conexao.class.php';
-	 * $db = Conexao::conectar();
-	 * E agora use as funções do PDO (prepare, query, exec) em cima da variável $db.
-	 */
+<?php
 	class Conexao
 	{
 	    # Variável que guarda a conexão PDO.

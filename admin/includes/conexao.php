@@ -1,14 +1,4 @@
 <?php
-	/*
-	$servidor = 'localhost';
-	$usuario = 'root';
-	$senha = '';
-	$banco = 'escola';
-	$con = mysql_connect($servidor,$usuario,$senha);
-	mysql_set_charset('iso-8859-1',$con);
-	mysql_select_db($banco);
-	*/
-
 
 	$servidor 	= 'http://www.terenciani.com.br';
 	$banco	  	= "teren671_bd_escola";
