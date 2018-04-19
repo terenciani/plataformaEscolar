@@ -2,9 +2,6 @@
 	include_once("controller/LoginController.class.php");
 	$controller = new LoginController();
 
-
-
-
 	if(isset($_POST['login'])){
 		$resposta = $controller->logar($_POST);
 		if($resposta['erro']):
