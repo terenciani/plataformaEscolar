@@ -4,6 +4,10 @@
 
 	$controller->verificarLogado();
 
+
+
+
+
 	if(isset($_GET['sair']))
 		$controller->deslogar();		
 ?>
