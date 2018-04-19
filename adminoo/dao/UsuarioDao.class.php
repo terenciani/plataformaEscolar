@@ -1,7 +1,7 @@
 <?php
 	require_once("includes/Conexao.class.php");
 	include_once("model/Usuario.class.php");
-	class DaoUsuario {
+	class UsuarioDao {
 
 		public static $instancia;
 
