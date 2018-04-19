@@ -45,7 +45,7 @@
 					</div>
 
 					<div class="col-sm-2 thumbnail item-menu">
-						<a href="artigo_principal.php" title="Alterações nos Artigos" >Gerenciar <br /> Dados Da Escola </a>
+						<a href="Dados_Escola_Principal.php" title="Alterações nos Dados da Escola" >Gerenciar <br /> Dados Da Escola </a>
 					</div>
 				</div>
 			</section>
