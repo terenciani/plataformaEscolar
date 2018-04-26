@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once("dao/DaoUsuario.class.php");
+	include_once("dao/UsuarioDao.class.php");
 	
   	class LoginController {
 
@@ -10,7 +10,7 @@
 			$login  	= addslashes($post["usuario"]);
 			$senha 		= addslashes($post["senha"]);
 
-			$dao = new DaoUsuario();
+			$dao = new UsuarioDao();
 
 			$usuario = $dao->buscarUsuarioPorLogin($login);
 			
