@@ -1,5 +1,7 @@
 <?php
-	include_once("controller/MediaController.class.php");
+	require_once '/admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'MediaController.class.php';
+
 	$controller = new MediaController();
 ?>
 <!DOCTYPE html>
@@ -11,15 +13,15 @@
     <meta name="description" content="Site institucional da Escola Estadual Waldemir Barros da Silva" />
     <meta name="author" content="Marcelo Figueiredo Terenciani" />
 
-    <link rel="shortcut icon" href="imagens/menu/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="admin/imagens/menu/favicon.png" type="image/png">
 
 	<!-- Bootstrap core CSS -->
-    <link href="components/bootstrap-4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="admin/components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!--FontAwesome-->
-	<link rel="stylesheet" href="components/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="admin/components/font-awesome-4.7.0/css/font-awesome.min.css" />
 
-	<link rel="stylesheet" href="components/fancybox-master/jquery.fancybox.min.css" media="screen" />
+	<link rel="stylesheet" href="admin/components/fancybox-master/jquery.fancybox.min.css" media="screen" />
 
 	<!-- CSS padrao -->
 	<link rel="stylesheet" href="css/estilo.css" />
@@ -95,8 +97,8 @@
 								foreach ($medias as $media):
 						?>
 						<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-							<a href="imagens/galerias/<?=$media->getUrl()?>" data-fancybox="group" data-type="image" data-caption="<?=$media->getTitulo()?>" class="thumbnail">
-						     	<img src="imagens/galerias/<?=$media->getUrl()?>" class="thumbnail img-fluid img-galeria" alt="<?=$media->getAlt()?>" />
+							<a href="admin/imagens/galerias/<?=$media->getUrl()?>" data-fancybox="group" data-type="image" data-caption="<?=$media->getTitulo()?>" class="thumbnail">
+						     	<img src="admin/imagens/galerias/<?=$media->getUrl()?>" class="thumbnail img-fluid img-galeria" alt="<?=$media->getAlt()?>" />
 						  	</a>							
 						</div>
 						<?php
@@ -120,10 +122,10 @@
 
 
 	<!-- Bootstrap core JavaScript -->
-    <script src="components/jquery/jquery-3.2.1.min.js"></script>
-    <script src="components/popper/popper.min.js"></script>
-    <script src="components/bootstrap-4.0.0-beta/js/bootstrap.min.js"></script>
-    <script src="components/fancybox-master/jquery.fancybox.min.js"></script>
+    <script src="admin/components/jquery/jquery-3.2.1.min.js"></script>
+    <script src="admin/components/popper/popper.min.js"></script>
+    <script src="admin/components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
+    <script src="admin/components/fancybox-master/jquery.fancybox.min.js"></script>
     <script src="js/galeria.js"></script>
     
 </body>

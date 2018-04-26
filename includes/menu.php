@@ -3,12 +3,12 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-3 col-xs-2 logo-governo-ms-topo">
 					<a href="http://www.ms.gov.br" title="Governo do Estado do MS">
-						<img src="imagens/menu/logo-governo-ms-topo.png" class="img-fluid"/>
+						<img src="admin/imagens/menu/logo-governo-ms-topo.png" class="img-fluid"/>
 					</a>
 				</div>
 				<div class="col-md-6 transparencia">
 					<a href="http://www.transparencia.ms.gov.br/" target="_new" title="Portal da Transparência">			
-						<img src="imagens/menu/campanhas-intitucionais.jpg" class="img-fluid mx-auto d-block">			
+						<img src="admin/imagens/menu/campanhas-intitucionais.jpg" class="img-fluid mx-auto d-block">			
 					</a>
 				</div>
 				<div class="col-md-3 col-sm-9 col-xs-10">
@@ -16,22 +16,22 @@
 						<ul>
 							<li>
 								<a href="https://twitter.com/GovernoMS" target="_new">
-									<img src="imagens/menu/icone-twitter.png" alt="Twitter" title="Twitter" />
+									<img src="admin/imagens/menu/icone-twitter.png" alt="Twitter" title="Twitter" />
 								</a>
 							</li>
 							<li>
 								<a href="https://www.facebook.com/GovernodeMatoGrossodoSul" target="_new">
-									<img src="imagens/menu/icone-facebook.png" alt="Facebook" title="Facebook" />
+									<img src="admin/imagens/menu/icone-facebook.png" alt="Facebook" title="Facebook" />
 								</a>
 							</li>
 							<li>
 								<a href="http://www.instagram.com/governoms" target="_new">
-									<img src="imagens/menu/icone-instagram.png" alt="Instagram" title="Instagram" />
+									<img src="admin/imagens/menu/icone-instagram.png" alt="Instagram" title="Instagram" />
 								</a>
 							</li>
 							<li>
 								<a href="https://www.youtube.com/channel/UCsx68AuYoA3ogPBBYOURHaA" target="_new">
-									<img src="imagens/menu/icone-youtube.png" alt="YouTube" title="YouTube" />
+									<img src="admin/imagens/menu/icone-youtube.png" alt="YouTube" title="YouTube" />
 								</a>
 							</li>
 						</ul>
@@ -82,14 +82,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2 col-sm-3 centro-vertical">
-					<img src="imagens/menu/wbs-logo.png" title="Escola Estadual Waldemir Barros da Silva" alt="Logo da Escola" class="img-fluid mx-auto d-block logo-escola" />
+					<img src="admin/imagens/menu/wbs-logo.png" title="Escola Estadual Waldemir Barros da Silva" alt="Logo da Escola" class="img-fluid mx-auto d-block logo-escola" />
 				</div>
 				<hgroup class="col-md-8 col-sm-6">
 					<h3 class="h1-escola">Escola Estadual Waldemir Barros da Silva</h3>
 					<h6 class="slogan">Escola da Autoria e Ensino Médio Integrado ao Curso Técnico em Informática</h6>
 				</hgroup>
 				<div class="col-md-2 col-sm-3 centro-vertical">
-					<img src="imagens/menu/wbstec-logo.png" title="Ensino Médio Integrado ao Curso Técnico em Informática" alt="Logo da Escola" class="img-fluid mx-auto d-block logo-escola" />
+					<img src="admin/imagens/menu/wbstec-logo.png" title="Ensino Médio Integrado ao Curso Técnico em Informática" alt="Logo da Escola" class="img-fluid mx-auto d-block logo-escola" />
 				</div>
 			</div>
 		</div>

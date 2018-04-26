@@ -12,7 +12,7 @@
 }
 
 body#login-bg{
-	background: url(../images/login/login_bg.jpg) no-repeat top center;
+	background: url(../imagens/login/login_bg.jpg) no-repeat top center;
 }
 img#logo-login{
 	width:150px;
@@ -20,7 +20,7 @@ img#logo-login{
 }
 
 .super-centro {
-	background: url(../images/login/loginbox_bg.png) no-repeat;
+	background: url(../imagens/login/loginbox_bg.png) no-repeat;
 	width:500px;
 	height:300px;
 	position:absolute;

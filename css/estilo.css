@@ -10,7 +10,7 @@ body {
     margin: 0 0 50px;
 }
 .menu-gov{
-    background: url('../imagens/menu/pattern-topo.png') repeat #FFF;
+    background: url('../admin/imagens/menu/pattern-topo.png') repeat #FFF;
     border-top-style: solid;
     border-top-color: green;
     border-top-width: 3px;
@@ -595,4 +595,7 @@ img.icone-galeria{
 }
 .btn-artigo{
 	margin-bottom: 10px;
+}
+.checked{
+	background-color: #7620206e !important;
 }

@@ -1,5 +1,7 @@
 <?php
-	include_once("controller/IndexController.class.php");
+	require_once '/admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'IndexController.class.php';
+	
 	$controller = new IndexController();
 ?>
 <!DOCTYPE html>
@@ -11,13 +13,13 @@
     <meta name="description" content="Site institucional da Escola Estadual Waldemir Barros da Silva" />
     <meta name="author" content="Marcelo Figueiredo Terenciani" />
 
-    <link rel="shortcut icon" href="imagens/menu/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="admin/imagens/menu/favicon.png" type="image/png">
 
 	<!-- Bootstrap core CSS -->
-    <link href="components/bootstrap-4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="admin/components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!--FontAwesome-->
-	<link rel="stylesheet" href="components/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="admin/components/font-awesome-4.7.0/css/font-awesome.min.css" />
 
 	<!-- CSS padrao -->
 	<link rel="stylesheet" href="css/estilo.css" />
@@ -81,7 +83,7 @@
 			 				?>
 							<div class="carousel-item <?=$classe?>">
 								<a href="<?=$banner->getLink()?>">
-									<img class="d-block w-100" src="imagens/banners/<?=$banner->getImagem()?>" alt="<?=$banner->getAlt()?>" title="<?=$banner->getTitulo()?>" />
+									<img class="d-block w-100" src="admin/imagens/banners/<?=$banner->getImagem()?>" alt="<?=$banner->getAlt()?>" title="<?=$banner->getTitulo()?>" />
 								</a>
 							</div>
 							<?php
@@ -113,7 +115,7 @@
 							<div class="noticia">
 								<div class="cartao-noticia">
 									<a href="noticias.php?id=<?= $noticia->getId_noticia() ?>" class="imagem-noticia img-fluid">
-										<img src="imagens/noticias/<?= $noticia->getImagem() ?>" alt="Notícia Principal" title="">
+										<img src="admin/imagens/noticias/<?= $noticia->getImagem() ?>" alt="Notícia Principal" title="">
 									</a>
 									<div class="detalhes-noticia">
 										<h3 class="titulo-noticia"><?= $noticia->getTitulo() ?></h3>
@@ -147,7 +149,7 @@
 						<div class="item-mural border-gray">
 							<a href="<?=$bannerMural->getLink()?>">
 								<h6 class="data-item-mural"><?=$bannerMural->getData()?></h6>
-								<img class="img-fluid img-item-mural" src="imagens/banners/<?=$bannerMural->getImagem()?>" title="<?=$bannerMural->getTitulo()?>" alt="<?=$bannerMural->getAlt()?>" />
+								<img class="img-fluid img-item-mural" src="admin/imagens/banners/<?=$bannerMural->getImagem()?>" title="<?=$bannerMural->getTitulo()?>" alt="<?=$bannerMural->getAlt()?>" />
 							</a>
 						</div>
 						<?php
@@ -166,7 +168,7 @@
 					$banner = $controller->getBannerPromocional();
  				?>
 					<a href="<?=$banner->getLink()?>">
-						<img class="img-fluid" src="imagens/banners/<?=$banner->getImagem()?>" alt="<?=$banner->getAlt()?>" title="<?=$banner->getTitulo()?>" />
+						<img class="img-fluid" src="admin/imagens/banners/<?=$banner->getImagem()?>" alt="<?=$banner->getAlt()?>" title="<?=$banner->getTitulo()?>" />
 					</a>
 
 			</div>
@@ -199,7 +201,7 @@
 					<div class="border-gray">
 						<a href="feccat.php" title="Ir para Anais da FECCAT">
 							<h1 class="div-label">Anais da FECCAT</h1>
-							<img src="imagens/feccat.png" class="img-fluid icone-galeria"></span>
+							<img src="admin/imagens/feccat.png" class="img-fluid icone-galeria"></span>
 						</a>
 					</div>
 				</div>
@@ -215,8 +217,8 @@
 
 
 	<!-- Bootstrap core JavaScript -->
-    <script src="components/jquery/jquery-3.2.1.min.js"></script>
-    <script src="components/popper/popper.min.js"></script>
-    <script src="components/bootstrap-4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="admin/components/jquery/jquery-3.2.1.min.js"></script>
+    <script src="admin/components/popper/popper.min.js"></script>
+    <script src="admin/components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
 </body>
 </html>

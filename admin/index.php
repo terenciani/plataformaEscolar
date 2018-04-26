@@ -1,10 +1,23 @@
 <?php
-	// Inclui o arquivo com o sistema de segurança
-	include("includes/seguranca.php");
-	// Chama a função que protege a página
-	protegePagina();
-	date_default_timezone_set('America/Campo_Grande');
+	require_once '/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'LoginController.class.php';
+
+	$controller = new LoginController();
+
+	if(isset($_POST['login'])){
+		$resposta = $controller->logar($_POST);
+		if($resposta['erro']):
 ?>
+			<div class="alert alert-warning alert-dismissible" role="alert">
+		  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  		<strong>Erro! </strong> <?=$resposta['msg']?>;
+			</div>
+<?php
+		endif;
+	}
+	
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -12,46 +25,31 @@
 		<title>..:: Admin WBS ::..</title>
 		
 		<!--  Nucleo do jquery -->
-		<link href="js/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/adm-estilo.css" type="text/css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 	</head>
-	<body>
-		<div class="container-fluid">
-			<?php
-				include("includes/menu.php");
-			?>
-			<section class="container">
-				<h3><?php echo "Bem Vindo, " . $_SESSION['usuarioNome'] . "!";?></h3>
-				<div class="thumbnail" id="conteudo">
-					<div class="col-sm-2 thumbnail item-menu">
-						<a href="banner_principal.php" title="Alterações de Banners e Mural" >Gerenciar <br /> Banners</a>
-					</div>
-					<div class="col-sm-2 thumbnail item-menu">
-						<a href="noticia_principal.php" title="Alterações nas Notícias" >Gerenciar <br /> Notícias </a>
-					</div>
-					<div class="col-sm-2 thumbnail item-menu">
-						<a href="equipe_principal.php" title="Alterações na Equipe" >Gerenciar <br /> Equipe </a>
-					</div>
-					<div class="col-sm-2 thumbnail item-menu">
-						<a href="foto_principal.php" title="Alterações nas Fotos" >Gerenciar <br /> Fotos </a>
-					</div>
-					<div class="col-sm-2 thumbnail item-menu">
-						<a href="artigo_principal.php" title="Alterações nos Artigos" >Gerenciar <br /> Artigos </a>
-					</div>
+	<body id="login-bg"> 
+		<div class="container super-centro">
+			<img id="img-logo" src="imagens/shared/logo.png" alt="" />			
+			<form name="form1" method="post" class="form-signin">
+				<div class="form-group">
+					<label for="inputUsuario" class="sr-only">Usuário</label>
+					<input type="text" id="inputUsuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus>
 				</div>
-			</section>
-			
-				
-			<footer class="row footer">
-				Escola Estadual Waldemir Barros da Silva <br />
-				Endereço: R. Palmácia - Moreninha II, Campo Grande - MS, 79065-140 </br>
-				Telefone:(67) 3314-9014
-			</footer>	
-			<!-- END: footer -->
+				<div class="form-group">
+					<label for="inputPassword" class="sr-only">Senha</label>
+					<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
+				</div>
+				<input class="btn btn-lg btn-default btn-block botao-logar" type="submit" value="Entrar" name="login" />
+			</form>
 		</div>
-		<?php
-			include("includes/javascript.php");
-		?>	
+ 		
+		<script src="components/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
+		<script src="components/jquery-confirm/jquery-confirm.js" type="text/javascript"></script>
+		<script src="components/bootstrap-datepicker-1.6.1-dist/js/bootstrap-datepicker.min.js"></script>
+		<script src="components/bootstrap-datepicker-1.6.1-dist/locales/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>

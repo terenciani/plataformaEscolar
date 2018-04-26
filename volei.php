@@ -1,7 +1,9 @@
 <?php
 	require_once '/admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'ContatoController.class.php';
-	$controller = new ContatoController();
+	include_once LIB_CONTROLLER.DS.'EsporteController.class.php';
+	include_once LIB_MODEL.DS.'Aluno.class.php';
+
+	$controller = new EsporteController();
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +29,7 @@
 </head>
 <body>
 	<?php
-		include_once 'includes/menu.php';
+		include_once 'admin/includes/menu.php';
 	?>
 	<nav class="navbar navbar-expand-lg navbar-light py-lg-4 menu-escola">
 		<div class="container">
@@ -61,85 +63,93 @@
 	</nav> <!--MenuEscola-->
 	<div id="conteudo" class="background-white">
 		<div class="container">
-			<h6 class="navegacao">Você está em: Contato</h6>
+			<h6 class="navegacao">Você está em: Vôlei</h6>
 			<div class="row border-gray">
-				<h1 class="div-label div-label-margin">Canais de Atendimento</h1>
-				<div class="col-md-12">
-					<iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14943.947980691068!2d-54.5814073649684!3d-20.547712999999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf42a2e93ffb9144b!2sEscola+Estadual+Waldemir+Barros+da+Silva!5e0!3m2!1spt-BR!2sus!4v1509966968771" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<h1 class="div-label div-label-margin">Vôlei</h1>
+				
 				<div class="col-md-12">
 					<?php
 						if(isset($_POST['submit'])){
-							echo $controller->enviarEmail($_POST);
+							$mensagem = $controller->inscrever($_POST, "VOLEI");
 						}
     				?>
 				</div>
-				<div class="col-md-5">
-					<?php 
-						$instituicao = $controller->getInstituicao();
-					?>
-					<label class="label-contato">Informações de Contato</label>
-					<div class="row">
-						<div class="col-md-2">
-							<label class="label-info">Endereço</label>
-						</div>
-
-						<div class="col-md-10">
-							<span class="span-contato"><?=$instituicao->getEndereco()?></span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-2">
-							<label class="label-info">E-mail</label>
-						</div>
-
-						<div class="col-md-10">
-							<span class="span-contato"><?=$instituicao->getEmail()?></span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-2">
-							<label class="label-info">Telefone</label>
-						</div>
-
-						<div class="col-md-10">
-							<span class="span-contato">(67) <?=$instituicao->getTelefone()?> / (67) <?=$instituicao->getTelefoneAlternativo()?></span>
-						</div>
-					</div>
-					<hr class="linha-contato">
-					<label class="label-contato">Redes Sociais</label>
-					<div class="midias midias-contato">
-						<ul>
-							<li>
-								<a href="<?=$instituicao->getFacebook()?>" target="_new" alt="Facebook" title="Facebook">
-									<i class="fa fa-facebook icon-midia" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a href="<?=$instituicao->getYoutube()?>" target="_new" alt="YouTube" title="YouTube">
-									<i class="fa fa-youtube-play icon-midia" aria-hidden="true"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-md-7">
-					<label class="label-contato">Entre em Contato Conosco</label>
-					<form id="form-contato" name="form-contato" method="POST">
+				<div class="col-md-6">
+					<h4 class="label-contato">Inscreva-se</h4>
+					<form id="form-volei" name="form-volei" method="POST">
 						<div class="form-group">
 							<input placeholder="Nome" name="nome" type="text" id="nome" class="form-control no-radius" required>
 						</div>
 						<div class="form-group">
-							<input placeholder="E-mail" name="email" type="email" id="email" class="form-control no-radius" required>
+							<select class="form-control no-radius" required name="turma">
+								<option selected value="">Selecione sua turma</option>
+								<option value="1º A">1º A</option>
+								<option value="1º B">1º B</option>
+								<option value="1º C">1º C</option>
+								<option value="1º EMII A">1º A Integrado</option>
+								<option value="1º EMII B">1º B Integrado</option>
+								<option value="1º EMII C">1º C Integrado</option>
+								<option value="2º A">2º A</option>
+								<option value="2º B">2º B</option>
+								<option value="2º C">2º C</option>
+								<option value="2º D">2º D</option>
+								<option value="2º EMII A">2º A Integrado</option>
+								<option value="2º EMII B">2º B Integrado</option>
+								<option value="3º A">3º A</option>
+								<option value="3º EMII A">3º A Integrado</option>
+								<option value="Professor">Professor</option>
+							</select>
 						</div>
-						<div class="form-group">
-							<textarea placeholder="Mensagem" name="mensagem" rows="7" id="mensagem" class="form-control no-radius" required></textarea>
-						</div>
-						<div class="g-recaptcha" id="captcha" data-sitekey="6LdfjzcUAAAAAI015lg3aXVnIESQMWOjADOjyOdM"></div>
-						<input type="submit" name="submit" value="Enviar Mensagem" class="btn btn-primary no-radius btn-contato">
+						<input type="submit" name="submit" value="Entrar na Lista" class="btn btn-primary no-radius btn-contato">
 					</form>
-					
+					<?php
+						if (isset($mensagem)):
+					?>
+							<script type="text/javascript">
+								alert('Inscrição Realizada com Sucesso!');
+							</script>
+					<?php
+						endif;
+					?>
+				</div>
+				<div class="col-md-6">
+					<h4 class="label-contato">Ordem de Jogo</h4>
+					<table class="table table-striped">
+						<thead>
+							<th>#</th>
+							<th>Nome</th>
+							<th>Turma</th>
+							<th>#</th>
+						</thead>
+						<tbody>
+							<?php
+								$alunos = $controller->getListaPorEsporte("VOLEI");
+								foreach ($alunos as $aluno):
+									if($aluno->getUltimo()==1){
+										$classe = "checked";
+									}else{
+										$classe = "";
+									}
+							?>
+								<tr class="<?=$classe?>">
+									<td>
+										<?=$aluno->getId_aluno()?>
+									</td>
+									<td>
+										<?=$aluno->getNome()?>
+									</td>
+									<td>
+										<?=$aluno->getTurma()?>
+									</td>
+									<td>
+										<input type="radio" name="ultimo">
+									</td>
+								</tr>
+							<?php
+								endforeach;
+							?>
+						</tbody>
+					</table>
 				</div>
 			</div>
 

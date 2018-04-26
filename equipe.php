@@ -1,5 +1,7 @@
 <?php
-	include_once("controller/EquipeController.class.php");
+	require_once '/admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'EquipeController.class.php';
+	
 	$controller = new EquipeController();
 ?>
 <!DOCTYPE html>
@@ -14,7 +16,7 @@
     <link rel="shortcut icon" href="imagens/menu/favicon.png" type="image/png">
 
 	<!-- Bootstrap core CSS -->
-    <link href="components/bootstrap-4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!--FontAwesome-->
 	<link rel="stylesheet" href="components/font-awesome-4.7.0/css/font-awesome.min.css" />
@@ -66,7 +68,7 @@
 					<?php
 						$banner = $controller->getBannerEquipe();
 	 				?>
-					<img class="img-fluid img-equipe" src="imagens/banners/<?=$banner->getImagem()?>" alt="<?=$banner->getAlt()?>" title="<?=$banner->getTitulo()?>" />
+					<img class="img-fluid img-equipe" src="admin/imagens/banners/<?=$banner->getImagem()?>" alt="<?=$banner->getAlt()?>" title="<?=$banner->getTitulo()?>" />
 				</div>
 				
 				<div class="col-md-6">
@@ -96,7 +98,7 @@
 				?>
 				<div class="col-md-2 col-sm-3 col-6 parte-equipe">
 					<div class="equipe-item">
-						<img class="img-fluid img-circle" src="imagens/equipe/<?=$professor->getImagem()?>" title="Foto Pessoal" alt="Foto Pessoal" />
+						<img class="img-fluid img-circle" src="admin/imagens/equipe/<?=$professor->getImagem()?>" title="Foto Pessoal" alt="Foto Pessoal" />
 						<h6 class="nome-equipe"><?=$professor->getNomeSobrenome()?></h6>
 						<p class="funcao-equipe"><?=$professor->getFuncao().' - '.$professor->getAtuacao()?></p>
 					</div>
@@ -113,7 +115,7 @@
 				?>
 				<div class="col-md-2 col-sm-3 col-6 parte-equipe">
 					<div class="equipe-item">
-						<img class="img-fluid img-circle" src="imagens/equipe/<?=$adminstrativo->getImagem()?>" title="Foto Pessoal" alt="Foto Pessoal" />
+						<img class="img-fluid img-circle" src="admin/imagens/equipe/<?=$adminstrativo->getImagem()?>" title="Foto Pessoal" alt="Foto Pessoal" />
 						<h6 class="nome-equipe"><?=$adminstrativo->getNome()?></h6>
 						<p class="funcao-equipe"><?=$adminstrativo->getFuncao().' - '.$adminstrativo->getAtuacao()?></p>
 					</div>
@@ -132,9 +134,9 @@
 
 
 	<!-- Bootstrap core JavaScript -->
-    <script src="components/jquery/jquery-3.2.1.min.js"></script>
-    <script src="components/popper/popper.min.js"></script>
-    <script src="components/bootstrap-4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="admin/components/jquery/jquery-3.2.1.min.js"></script>
+    <script src="admin/components/popper/popper.min.js"></script>
+    <script src="admin/components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
     <script src="js/equipe.js"></script>
     
 </body>

@@ -1,5 +1,7 @@
 <?php
-	include_once("controller/NoticiasController.class.php");
+	require_once '/admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'NoticiasController.class.php';
+	
 	$controller = new NoticiasController();
 ?>
 <!DOCTYPE html>
@@ -11,13 +13,13 @@
     <meta name="description" content="Site institucional da Escola Estadual Waldemir Barros da Silva" />
     <meta name="author" content="Marcelo Figueiredo Terenciani" />
 
-    <link rel="shortcut icon" href="imagens/menu/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="admin/imagens/menu/favicon.png" type="image/png">
 
 	<!-- Bootstrap core CSS -->
-    <link href="components/bootstrap-4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="admin/components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!--FontAwesome-->
-	<link rel="stylesheet" href="components/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="admin/components/font-awesome-4.7.0/css/font-awesome.min.css" />
 
 	<!-- CSS padrao -->
 	<link rel="stylesheet" href="css/estilo.css" />
@@ -80,7 +82,7 @@
 									<span class="data-noticia-individual"> <i class="fa fa-calendar icon-relogio" aria-hidden="true"></i> <?=$noticia->getData()?></span>
 								</div>
 								<figure class="figure-noticia">
-									<img src="imagens/noticias/<?=$noticia->getImagem()?>" alt="Imagem da Notícia" title="<?=$noticia->getTitulo()?>" class="img-fluid ">
+									<img src="admin/imagens/noticias/<?=$noticia->getImagem()?>" alt="Imagem da Notícia" title="<?=$noticia->getTitulo()?>" class="img-fluid ">
 									<figcaption>
 										Fonte: <?=$noticia->getFonte()?>
 									</figcaption>
@@ -104,7 +106,7 @@
 							<div class="row card-pag-noticias">
 								<div class="col-md-4 col-sm-5 col-xs-6">
 									<a href="noticias.php?id=<?=$noticia->getId_noticia()?>" class="img-noticias">
-										<img src="imagens/noticias/<?=$noticia->getImagem()?>" alt="Imagem Notícia" title="Clique para visualizar" class="img-fluid">
+										<img src="admin/imagens/noticias/<?=$noticia->getImagem()?>" alt="Imagem Notícia" title="Clique para visualizar" class="img-fluid">
 									</a>
 								</div>
 								<div class="col-sm-7 col-md-8 col-xs-6">
@@ -132,8 +134,8 @@
 
 
 	<!-- Bootstrap core JavaScript -->
-    <script src="components/jquery/jquery-3.2.1.min.js"></script>
-    <script src="components/popper/popper.min.js"></script>
-    <script src="components/bootstrap-4.0.0-beta/js/bootstrap.min.js"></script>    
+    <script src="admin/components/jquery/jquery-3.2.1.min.js"></script>
+    <script src="admin/components/popper/popper.min.js"></script>
+    <script src="admin/components/bootstrap-4.0.1/js/bootstrap.min.js"></script>    
 </body>
 </html>
