@@ -1,5 +1,4 @@
 <?php
-	require_once 'admin/includes/init.php';
 	include_once 'admin/dao/DaoNoticia.class.php';
 	include_once 'admin/dao/DaoBanner.class.php';
 	

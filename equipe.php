@@ -15,10 +15,10 @@
     <link rel="shortcut icon" href="imagens/menu/favicon.png" type="image/png">
 
 	<!-- Bootstrap core CSS -->
-    <link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="admin/components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!--FontAwesome-->
-	<link rel="stylesheet" href="components/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="admin/components/font-awesome-4.7.0/css/font-awesome.min.css" />
 
 	<!-- CSS padrao -->
 	<link rel="stylesheet" href="css/estilo.css" />

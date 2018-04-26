@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once 'dao/DaoUsuario.class.php';
+	include_once 'admin/dao/DaoUsuario.class.php';
 	
   	class LoginController {
 

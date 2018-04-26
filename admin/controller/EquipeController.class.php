@@ -1,6 +1,6 @@
 <?php
-	include_once 'dao/DaoEquipe.class.php';
-	include_once 'dao/DaoBanner.class.php';
+	include_once 'admin/dao/DaoEquipe.class.php';
+	include_once 'admin/dao/DaoBanner.class.php';
 	
   	class EquipeController {
 		public function getBannerEquipe() {
