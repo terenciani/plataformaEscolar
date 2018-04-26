@@ -1,6 +1,5 @@
 <?php
-	require_once '/admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'InstitucionalController.class.php';
+	include_once '/admin/controller/InstitucionalController.class.php';
 
 	$controller = new InstitucionalController();
 ?>

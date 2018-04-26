@@ -1,6 +1,5 @@
 <?php
-	require_once '/admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'ProfissionalController.class.php';
+	include_once '/admin/controller/ProfissionalController.class.php';
 	$controller = new ProfissionalController();
 ?>
 <!DOCTYPE html>

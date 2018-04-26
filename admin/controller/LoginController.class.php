@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once LIB_DAO.DS.'DaoUsuario.class.php';
+	include_once 'dao/DaoUsuario.class.php';
 	
   	class LoginController {
 

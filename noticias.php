@@ -1,6 +1,5 @@
 <?php
-	require_once '/admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'NoticiasController.class.php';
+	include_once '/admin/controller/NoticiasController.class.php';
 	
 	$controller = new NoticiasController();
 ?>

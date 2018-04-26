@@ -1,6 +1,6 @@
 <?php
-	include_once LIB_DAO.DS.'DaoCategoria.class.php';
-	include_once LIB_DAO.DS.'DaoMedia.class.php';
+	include_once 'dao/DaoCategoria.class.php';
+	include_once 'dao/DaoMedia.class.php';
 	
   	class MediaController {
 		public function getCategoriasMedias() {

@@ -1,6 +1,5 @@
 <?php
-	require_once '/admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'EquipeController.class.php';
+	include_once '/admin/controller/EquipeController.class.php';
 	
 	$controller = new EquipeController();
 ?>

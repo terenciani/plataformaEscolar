@@ -1,6 +1,6 @@
 <?php
-	include_once LIB_INCLUDES.DS.'Conexao.class.php';
-  	include_once LIB_MODEL.DS.'Banner.class.php';
+	include_once 'admin/includes/Conexao.class.php';
+  	include_once 'admin/model/Banner.class.php';
 	class DaoBanner {
 
 		public static $instancia;

@@ -1,5 +1,5 @@
 <?php
-	include_once LIB_DAO.DS.'DaoInstituicao.class.php';
+	include_once 'dao/DaoInstituicao.class.php';
 	
   	class InstitucionalController {
   		
