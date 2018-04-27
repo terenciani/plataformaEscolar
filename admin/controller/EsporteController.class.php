@@ -1,5 +1,5 @@
 <?php
-	include_once 'admin/dao/DaoEsporte.class.php';
+	include_once LIB_DAO.DS.'DaoEsporte.class.php';
 	
   	class EsporteController {
 

@@ -1,6 +1,6 @@
 <?php
-	include_once 'admin/includes/Conexao.class.php';
-  	include_once 'admin/model/Usuario.class.php';
+	include_once LIB_INCLUDES.DS.'Conexao.class.php';
+	include_once LIB_MODEL.DS.'Usuario.class.php';
   	
 	class DaoUsuario {
 

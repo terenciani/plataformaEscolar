@@ -1,5 +1,5 @@
 <?php
-	require_once '/includes/init.php';
+	require_once 'includes/init.php';
 	include_once LIB_CONTROLLER.DS.'LoginController.class.php';
 
 	$controller = new LoginController();
@@ -20,7 +20,7 @@
 		<!--  Nucleo do jquery -->
 		<link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/adm-estilo.css" type="text/css" />
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+		<link rel="shortcut icon" type="image/png" href="imagens/favicon.png"/>
 	</head>
 	<body>
 		<div class="container-fluid">

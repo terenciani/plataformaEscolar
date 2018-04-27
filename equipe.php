@@ -1,5 +1,6 @@
 <?php
-	include_once '/admin/controller/EquipeController.class.php';
+	require_once 'admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'EquipeController.class.php';
 	
 	$controller = new EquipeController();
 ?>
@@ -12,7 +13,7 @@
     <meta name="description" content="Site institucional da Escola Estadual Waldemir Barros da Silva" />
     <meta name="author" content="Marcelo Figueiredo Terenciani" />
 
-    <link rel="shortcut icon" href="imagens/menu/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="admin/imagens/menu/favicon.png" type="image/png">
 
 	<!-- Bootstrap core CSS -->
     <link href="admin/components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">

@@ -1,5 +1,6 @@
 <?php
-	include_once 'controller/LoginController.class.php';
+	require_once 'includes/init.php';
+	include_once LIB_CONTROLLER.DS.'LoginController.class.php';
 
 	$controller = new LoginController();
 

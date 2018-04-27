@@ -1,5 +1,6 @@
 <?php
-	include_once '/admin/controller/MediaController.class.php';
+	require_once 'admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'MediaController.class.php';
 
 	$controller = new MediaController();
 ?>

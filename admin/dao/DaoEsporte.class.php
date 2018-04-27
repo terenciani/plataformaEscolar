@@ -1,6 +1,6 @@
 <?php
-	include_once 'admin/includes/Conexao.class.php';
-	include_once 'admin/model/Aluno.class.php';
+	include_once LIB_INCLUDES.DS.'Conexao.class.php';
+	include_once LIB_MODEL.DS.'Aluno.class.php';
 	
 	class DaoEsporte {
 

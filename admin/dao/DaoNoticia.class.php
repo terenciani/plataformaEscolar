@@ -1,6 +1,6 @@
 <?php
-  include_once 'admin/includes/Conexao.class.php';
-  include_once 'admin/model/Noticia.class.php';
+  include_once LIB_INCLUDES.DS.'Conexao.class.php';
+  include_once LIB_MODEL.DS.'Noticia.class.php';
   
   class DaoNoticia {
    

@@ -1,6 +1,7 @@
 <?php
-	include_once '/admin/controller/EsporteController.class.php';
-	include_once '/admin/model/Aluno.class.php';
+	require_once 'admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'EsporteController.class.php';
+	include_once LIB_MODEL.DS.'Aluno.class.php';
 
 	$controller = new EsporteController();
 ?>

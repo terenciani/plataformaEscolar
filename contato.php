@@ -1,5 +1,7 @@
 <?php
-	include_once '/admin/controller/ContatoController.class.php';
+	require_once 'admin/includes/init.php';
+	include_once LIB_CONTROLLER.DS.'ContatoController.class.php';
+	
 	$controller = new ContatoController();
 ?>
 <!DOCTYPE html>

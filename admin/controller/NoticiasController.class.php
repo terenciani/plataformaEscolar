@@ -1,5 +1,5 @@
 <?php
-	include_once 'admin/dao/DaoNoticia.class.php';
+	include_once LIB_DAO.DS.'DaoNoticia.class.php';
 	
   	class NoticiasController {
 		public function getNoticias() {

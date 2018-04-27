@@ -1,6 +1,6 @@
 <?php
-	include_once 'admin/dao/DaoNoticia.class.php';
-	include_once 'admin/dao/DaoBanner.class.php';
+	include_once LIB_DAO.DS.'DaoNoticia.class.php';
+	include_once LIB_DAO.DS.'DaoBanner.class.php';
 	
   	class IndexController {
 		public function getNoticiasPrincipais() {

@@ -1,7 +1,7 @@
 <?php
-	include_once 'admin/includes/Conexao.class.php';
-  	include_once 'admin/model/Media.class.php';
- 	include_once 'admin/model/Artigo.class.php';
+	include_once LIB_INCLUDES.DS.'Conexao.class.php';
+	include_once LIB_MODEL.DS.'Media.class.php';
+ 	include_once LIB_MODEL.DS.'Artigo.class.php';
   	
 	class DaoMedia {
 
