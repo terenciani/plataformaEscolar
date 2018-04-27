@@ -3,7 +3,7 @@
 	// Ficheiro de inicialização de configurações gerais
 	define('DS', DIRECTORY_SEPARATOR);
 	define('ROOT',$_SERVER['DOCUMENT_ROOT']);
-	define('SITE_ROOT',ROOT.DS.'site');
+	define('SITE_ROOT',ROOT.DS.'plataformaEscolar');
 	define('SITE_ROOT_ADMIN',SITE_ROOT.DS.'admin');
 	# 2º alternativa
 	# define('SITE_ROOT',DS.'var'.DS.'www'.DS.'meu_site');
