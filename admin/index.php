@@ -6,14 +6,9 @@
 
 	if(isset($_POST['login'])){
 		$resposta = $controller->logar($_POST);
-		if($resposta['erro']):
-?>
-			<div class="alert alert-warning alert-dismissible" role="alert">
-		  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		  		<strong>Erro! </strong> <?=$resposta['msg']?>;
-			</div>
-<?php
-		endif;
+	}
+	else{
+		$resposta ['msg']="";
 	}
 	
 ?>
@@ -31,19 +26,44 @@
 	</head>
 	<body id="login-bg"> 
 		<div class="container super-centro">
+			<img id="img-logo" src="imagens/shared/logo.png" alt="" class="img-logo-branco" />
+			<form name="form1" method="post" class="form-signin">
+				<div class="form-group">
+					<label for="inputUsuario" class="sr-only">Usuário</label>
+					<input type="text" id="inputUsuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus />
+			</div>
+
+				<div class="form-group">
+					<label for="inputPassword" class="sr-only">Senha</label>
+					<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required />
+				</div>
+			
+				<h5>
+					<?=$resposta['msg']?>
+				</h5>
+				<input class="btn btn-lg btn-default btn-block botao-logar" type="submit" value="Entrar" name="login" />
+			</form>
+		</div>
+
+		<!--<div class="container super-centro">
 			<img id="img-logo" src="imagens/shared/logo.png" alt="" />			
 			<form name="form1" method="post" class="form-signin">
 				<div class="form-group">
 					<label for="inputUsuario" class="sr-only">Usuário</label>
 					<input type="text" id="inputUsuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus>
-				</div>
+			</div>
+
 				<div class="form-group">
 					<label for="inputPassword" class="sr-only">Senha</label>
 					<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
 				</div>
+			
+				<h5>
+					<?=$resposta['msg']?>
+				</h5>
 				<input class="btn btn-lg btn-default btn-block botao-logar" type="submit" value="Entrar" name="login" />
 			</form>
-		</div>
+		</div>-->
  		
 		<script src="components/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script src="components/bootstrap-4.0.1/js/bootstrap.min.js"></script>

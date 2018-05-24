@@ -15,7 +15,7 @@
 			$usuario = $dao->buscarUsuarioPorLogin($login);
 			
 			if(is_null($usuario->getId_usuario())){
-				return array("erro"=>true, "msg"=>"Usuário não Encontrado!");   
+				return array("erro"=>true, "msg"=>"Usuário não encontrado!");   
 			}else{
 				if($senha == $usuario->getSenha()){
 					$_SESSION["id_usuario"] 	= $usuario->getId_usuario();

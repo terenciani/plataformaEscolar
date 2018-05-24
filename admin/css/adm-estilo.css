@@ -12,17 +12,20 @@
 }
 
 body#login-bg{
-	background: url(../imagens/login/login_bg.jpg) no-repeat top center;
+	background:linear-gradient(#303030, #838181, #303030); 
 }
 img#logo-login{
 	width:150px;
 	height:72px;
 }
+.img-logo-branco{
+	margin-bottom: 15px;
+}
 
 .super-centro {
-	background: url(../imagens/login/loginbox_bg.png) no-repeat;
-	width:500px;
-	height:300px;
+	border-radius: 12px;
+	background-color: #5d5c5c;
+	max-width:500px;
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -30,13 +33,12 @@ img#logo-login{
 	margin-left:-250px;
 	text-align: center;
 	padding: 35px;
+	-webkit-box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.75);
+	-moz-box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.75);
+	box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.75);
+
 }
 
-.form-signin {
-  max-width: 400px;
-  padding: 15px;
-  margin: 0 auto;
-}
 
 .botao-logar{
 	background-color: rgb(62,62,62);
@@ -167,6 +169,10 @@ a#link-logout:hover{
 
 h1#admin{
 	padding-bottom: 20px;
+}
+h5{
+	color:#ff0000;
+	
 }
 
 .options-edit{
