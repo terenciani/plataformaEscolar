@@ -1,10 +1,4 @@
-<?php
-	// Inclui o arquivo com o sistema de segurança
-	include("includes/seguranca.php");
-	// Chama a função que protege a página
-	protegePagina();
-	date_default_timezone_set('America/Campo_Grande');	
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<?php
