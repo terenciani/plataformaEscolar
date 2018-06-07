@@ -13,7 +13,7 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Notícias">
           <a class="nav-link" href="noticia.php">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <i class="far fa-newspaper"></i>
             <span class="nav-link-text">Notícias</span>
           </a>
         </li>
