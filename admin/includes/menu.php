@@ -27,12 +27,21 @@
           <a class="nav-link" href="escola.php">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Gerência da Escola </span>
+
           </a> <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="escola.php">
           <i class="fas fa-users-cog"></i>
-            <span class="nav-link-text">Gerencia de Equipe</span>
+            <span class="nav-link-text">Gerência de Equipe</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Educação Profissional">
+          <a class="nav-link" href="profissional.php">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="nav-link-text">Gerência de Educação Profissional</span>
+          </a>
+        </li>
+        
+    
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-sitemap"></i>
