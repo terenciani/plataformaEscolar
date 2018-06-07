@@ -31,8 +31,8 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file"></i>
-            <span class="nav-link-text">Example Pages</span>
+            <i class="fas fa-users-cog"></i>
+            <span class="nav-link-text">Gerencia de Equipe</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
