@@ -25,7 +25,7 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="escola.php">
-            <i class="fal fa-address-book"></i>
+            <i class="fas fa-address-book"></i>
             <span class="nav-link-text">Gerência da Escola </span>
 
           </a> <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
