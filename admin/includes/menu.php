@@ -29,6 +29,13 @@
             <span class="nav-link-text">Gerência da Escola </span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Educação Profissional">
+          <a class="nav-link" href="profissional.php">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="nav-link-text">Gerência de Educação Profissional</span>
+          </a>
+        </li>
+        
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fas fa-users-cog"></i>
