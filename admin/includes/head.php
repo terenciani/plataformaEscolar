@@ -8,7 +8,7 @@
     <!-- Bootstrap core CSS-->
     <link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
-    <link href="components/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome-5.0.13/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
     <link href="components/sbadmin/css/sb-admin.min.css" rel="stylesheet">
     
