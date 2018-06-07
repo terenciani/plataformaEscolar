@@ -1,5 +1,10 @@
 <?php
 	include_once LIB_DAO.DS.'DaoNoticia.class.php';
+		public function salvarUsuario($post){
+
+
+
+
 	
   	class NoticiasController {
 		public function getNoticias() {

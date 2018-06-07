@@ -67,10 +67,11 @@
 				<?php
 					if(isset($_GET['id'])):
 						$noticia = $controller->getNoticiaPorId($_GET['id']);
-				?>
+				?>	
 							
-							<div class="row card-pag-noticias">
-								<div class="col-md-12">
+							<div class="row ">
+
+								<div class="col-md-4">
 									<h1 class="titulo-noticias-pag"><?=$noticia->getTitulo()?></h1>	
 								</div>
 								<div class="col-md-12">
@@ -96,6 +97,8 @@
 								
 								
 							</div>
+						
+				
 				<?php
 						
 					else:
