@@ -2,6 +2,13 @@
 <html lang="pt-br">
   <?php
     include_once("includes/head.php");
+    include_once ("controller/EscolaController.class.php");
+    $controle = new EscolaController();
+    
+    if(isset($_POST["alterar"])){  
+        $dados = $controle->buscaDados();
+       // echo $dados;
+    }
   ?>
   
 
@@ -12,25 +19,40 @@
   ?>
   <div class="content-wrapper">
     <div class="container-fluid">
+
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Início</a>
         </li>
         <li class="breadcrumb-item active">
-          <a href="pagina-exemplo-base.php">Gerência da Escola</a>
+           Gerência da Escola
         </li>
       </ol>
+
       <div class="row">
         <div class="col-12">
-          <h1>Nome da área</h1>
-          Aqui vai o conteúdo
+
+            <form method="POST">
+                  <button name="alterar" type="submit" class="btn btn-lg btn-success pull-right">
+                      Alterar Dados
+                  </button>
+                  
+                  <h3>Nome da Escola </h3>
+
+            </form>
+           
+
+
+
+
+
+
+
+          
         </div>
       </div>
     </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>

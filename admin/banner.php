@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
   <?php
     include_once("includes/head.php");
@@ -66,18 +66,21 @@
                         <a href="http://www.eewbs.com.br/site/admin/banner_editar.php?id=3" title="Editar" class="glyphicon glyphicon-edit options-edit"></a>
                         <a href="http://www.eewbs.com.br/site/admin/banner_deletar.php?id=3" id="link-delete" title="Deletar" class="glyphicon glyphicon-minus-sign options-delet" data-title="Exclusão"></a>
                       </td>
-                      </tr><tr>
-                      <td>Equipe WBS 2017</td>
-                      <td></td>
-                      <td>EQUIPE</td>
-                      <td>12/12/2017</td>
-                      <td><img src="./_.__ Admin WBS __.._files/equipe.jpeg" width="150"></td>
+                      </tr>
 
-                      <td>
-                        <a href="http://www.eewbs.com.br/site/admin/banner_editar.php?id=4" title="Editar" class="glyphicon glyphicon-edit options-edit"></a>
-                        <a href="http://www.eewbs.com.br/site/admin/banner_deletar.php?id=4" id="link-delete" title="Deletar" class="glyphicon glyphicon-minus-sign options-delet" data-title="Exclusão"></a>
-                      </td>
-                      </tr><tr>
+                      <tr>
+                        <td>Equipe WBS 2017</td>
+                        <td></td>
+                        <td>EQUIPE</td>
+                        <td>12/12/2017</td>
+                        <td><img src="./_.__ Admin WBS __.._files/equipe.jpeg" width="150"></td>
+
+                        <td>
+                          <a href="http://www.eewbs.com.br/site/admin/banner_editar.php?id=4" title="Editar" class="glyphicon glyphicon-edit options-edit"></a>
+                          <a href="http://www.eewbs.com.br/site/admin/banner_deletar.php?id=4" id="link-delete" title="Deletar" class="glyphicon glyphicon-minus-sign options-delet" data-title="Exclusão"></a>
+                        </td>
+                      </tr>
+                      <tr>
                       <td>Eletivas 2018</td>
                       <td></td>
                       <td>ROTATIVO</td>

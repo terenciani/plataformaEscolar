@@ -29,14 +29,12 @@
 				<div class="thumbnail" id="conteudo">
 					<h3><?php echo "Bem Vindo, " . $_SESSION['nome_usuario'] . "!";?></h3>
 					<div class="col-2 thumbnail item-menu">
-						<a href="banner_principal.php" title="Alterações de Banners e Mural" >Gerenciar <br /> Banners</a>
+						<a href="banner.php" title="Alterações de Banners e Mural" >Gerenciar <br /> Banners</a>
 					</div>
 					<div class="col-sm-2 thumbnail item-menu">
-						<a href="noticia_principal.php" title="Alterações nas Notícias" >Gerenciar <br /> Notícias </a>
+						<a href="noticia.php" title="Alterações nas Notícias" >Gerenciar <br /> Notícias </a>
 					</div>
-					<div class="col-sm-2 thumbnail item-menu">
-						<a href="equipe_principal.php" title="Alterações na Equipe" >Gerenciar <br /> Equipe </a>
-					</div>
+
 					<div class="col-sm-2 thumbnail item-menu">
 						<a href="foto_principal.php" title="Alterações nas Fotos" >Gerenciar <br /> Fotos </a>
 					</div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Plataforma Escolar WBS</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -26,10 +26,11 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link" href="escola.php">
             <i class="fas fa-address-book"></i>
-            <span class="nav-link-text">Gerência da Escola </span>
+            <span class="nav-link-text"> Gerência da Escola </span>
+          </a>
 
           </a> <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="escola.php">
+          <a class="nav-link" href="equipe.php">
           <i class="fas fa-users-cog"></i>
             <span class="nav-link-text">Gerência de Equipe</span>
           </a>
@@ -43,7 +44,7 @@
         
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#modalSair">
+          <a class="nav-link" class="pull-left" data-toggle="modal" data-target="#modalSair">
             <i class="fa fa-fw fa-sign-out"></i>Sair</a>
         </li>
       </ul>
