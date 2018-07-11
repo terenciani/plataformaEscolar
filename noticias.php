@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>..:: EEWBS ::..</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -24,6 +25,10 @@
 	<!-- CSS padrao -->
 	<link rel="stylesheet" href="css/estilo.css" />
 	<link rel="stylesheet" href="css/queries.css" />
+	<style type="text/css">
+		.body{
+			background-color:rgba(211,211,211, 0,5); }
+	</style>
 </head>
 <body>
 	<?php

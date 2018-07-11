@@ -42,22 +42,28 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">ESCOLA DA AUTORIA, PRÊMIO GESTÃO ESCOLAR  </th>
+                <th scope="row">ESCOLA DA AUTORIA, PRÊMIO GESTÃO ESCOLAR</th>
                 <td>01/03/2018  </td>
-                <td><img src="../imagens/noticias/ce72100a6e5ab790f1297e364040f71f.png" width="150"></td>
-                <td>@mdo</td>
+                <td><img src="imagens/noticias/ce72100a6e5ab790f1297e364040f71f.png" width="100"></td>
+                <td><button class="btn btn-success float-right">Editar</button></td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <th scope="row">Reunião de Pais e Responsáveis</th>
+                <td>11/07/2018</td>
+                <td><img src="imagens/noticias/4a601fd2fc9a2f0ca0da22a5d65e6dea.png" width="100"></td>
+                <td><button class="btn btn-success float-right">Editar</button></td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
+                <th scope="row">Festa Junina Interna WBS 2018</th>
+                <td>9/07/2018</td>
+                <td><img src="imagens/noticias/059a6af175f9a7a3390976b28230575a.jpg" width="100"></td>
+                <td><button class="btn btn-success float-right">Editar</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Educação Integral, Regular e Profissional em 2018</th>
+                <td>11/02/2018</td>
+                <td><img src="imagens/noticias/6506f59e2f69a882cfdd35cdfac9512e.jpg" width="100"></td>
+                <td><button class="btn btn-success float-right">Editar</button></td>
               </tr>
             </tbody>
           </table>
