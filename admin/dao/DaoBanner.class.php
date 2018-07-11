@@ -1,4 +1,4 @@
-<?php
+ <?php
 	include_once LIB_INCLUDES.DS.'Conexao.class.php';
 	include_once LIB_MODEL.DS.'Banner.class.php';
 	class DaoBanner {

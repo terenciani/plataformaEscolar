@@ -1,7 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
   <?php
     include_once("includes/head.php");
+    if (isset($_POST['salvar'])){
+    include_once("");
+    $controle  = new NoticiaController("NoticiasController.class.php");
+    $controle->NoticiaController($_POST);
+  }
   ?>
   
 
@@ -89,18 +94,54 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        ...<form action="noticia_salvar.php" method="POST" character_set="UTF-8" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="titulo-noticia">Título</label>
+              <input type="text" class="form-control" id="titulo_noticia" name="titulo_noticia" required />
+            </div>
+            <div class="form-group">
+              <label for="chamada-noticia">Chamada</label>
+              <input type="text" class="form-control" id="chamada_noticia" name="chamada_noticia" required />
+            </div>
+            <div class="form-group">
+              <label for="texto-noticia">Texto</label>
+              <textarea class="form-control" rows="7" id="texto-noticia" name="texto_noticia" required ></textarea>
+            </div>
+            <br />
+            <div class="form-group">
+              <div class="col-md-3">
+                <label class="btn btn-default btn-file" for="btn-upload">Procurar Imagem
+                <input type="file" style="display: none;" name="imagem" id="btn-upload" required/>
+                </label>
+              </div>
+              <div class="col-md-9">
+                <input id="upload-file" class="form-control" placeholder="Nenhum arquivo selecionado. (460px - 430px)" disabled="disabled" />
+              </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+              <label for="data-noticia">Data da Notícia</label>
+              <input type="date" class="form-control data" id="data-noticia" name="data-noticia" required />
+            </div>
+            <div class="form-group">
+              <label for="fonte-noticia">Fonte da Notícia</label>
+              <input type="text" class="form-control" id="fonte-noticia" name="fonte-noticia" required />
+            </div>
+
+              <div class="botao-grupo float-right">
+                <input type="submit" class="btn btn-lg btn-success botao-form" name="Salvar" />
+                <input type="reset" class="btn btn-lg btn-danger botao-form btn-cancelar" name="Cancelar" />
+             </div>
+            
+          </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
-      </div>
+    
     </div>
   </div>
 </div>
