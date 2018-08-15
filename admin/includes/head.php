@@ -10,9 +10,10 @@
     <!-- Custom fonts for this template-->
     <link href="components/fontawesome-5.0.13/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
+    
     <link href="components/sbadmin/css/sb-admin.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/adm-estilo.css" type="text/css" />
-    
+    <link rel="stylesheet" href="css/jquery-confirm.css" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="imagens/favicon.png"/>
 </head>

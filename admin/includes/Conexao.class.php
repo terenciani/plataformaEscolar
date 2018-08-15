@@ -8,7 +8,7 @@
 	    {
 	        # Informações sobre o banco de dados:
 	        $db_host = "terenciani.com.br";
-	        $db_nome = "teren671_bd_escola";
+	        $db_nome = "teren671_bd_escola_teste";
 	        $db_usuario = "teren671_admin";
 	        $db_senha = "152535";
 	        $db_driver = "mysql";

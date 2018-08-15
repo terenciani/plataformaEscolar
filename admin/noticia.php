@@ -1,12 +1,19 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <?php
+    require_once 'includes/init.php';
+    include_once LIB_CONTROLLER.DS.'NoticiaController.class.php';
     include_once("includes/head.php");
-    if (isset($_POST['salvar'])){
-    include_once("");
-    $controle  = new NoticiaController("NoticiasController.class.php");
-    $controle->NoticiaController($_POST);
-  }
+    $controle  = new NoticiaController("NoticiaController.class.php");
+    if(isset($_GET['metodo'])){
+      if ($_GET['metodo'] == "DELETE") {
+        $controle->excluirNoticia($_GET['id']);
+      }
+    }
+
+    if(isset($_POST['metodo'])){
+      $msg = $controle->salvarNoticia($_POST, $_FILES);
+    }
   ?>
   
 
@@ -29,8 +36,22 @@
      
         
       <div class="row"> 
+        <?php
+          if (isset($msg)):
+        ?>
+            <div class="col-12">
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <?=$msg?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        <?php
+          endif;
+        ?>
         <div class="col-12 div-botoes">
-          <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".bd-example-modal-lg">
               Cadastrar Notícia
           </button>
         </div>
@@ -46,30 +67,25 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">ESCOLA DA AUTORIA, PRÊMIO GESTÃO ESCOLAR</th>
-                <td>01/03/2018  </td>
-                <td><img src="imagens/noticias/ce72100a6e5ab790f1297e364040f71f.png" width="100"></td>
-                <td><button class="btn btn-success float-right">Editar</button></td>
-              </tr>
-              <tr>
-                <th scope="row">Reunião de Pais e Responsáveis</th>
-                <td>11/07/2018</td>
-                <td><img src="imagens/noticias/4a601fd2fc9a2f0ca0da22a5d65e6dea.png" width="100"></td>
-                <td><button class="btn btn-success float-right">Editar</button></td>
-              </tr>
-              <tr>
-                <th scope="row">Festa Junina Interna WBS 2018</th>
-                <td>9/07/2018</td>
-                <td><img src="imagens/noticias/059a6af175f9a7a3390976b28230575a.jpg" width="100"></td>
-                <td><button class="btn btn-success float-right">Editar</button></td>
-              </tr>
-              <tr>
-                <th scope="row">Educação Integral, Regular e Profissional em 2018</th>
-                <td>11/02/2018</td>
-                <td><img src="imagens/noticias/6506f59e2f69a882cfdd35cdfac9512e.jpg" width="100"></td>
-                <td><button class="btn btn-success float-right">Editar</button></td>
-              </tr>
+              <?php
+                $noticias  = $controle->buscarTodasNoticias();
+                foreach ($noticias as $noticia):
+              ?>
+                  <tr>
+                    <td><?=$noticia->getTitulo()?></td>
+                    <td><?=$noticia->getData()?></td>
+                    <td><img src="imagens/noticias/<?=$noticia->getImagem()?>" width="100"></td>
+                    <td>
+                      <a href="noticia_editar.php?id=<?=$noticia->getId_noticia()?>" title='Editar'>
+                        <i class="fas fa-pencil-alt"></i>
+                      </a>
+                      <a href="noticia.php?metodo=DELETE&id=<?=$noticia->getId_noticia()?>" id='link-delete' title='Deletar'>
+                        <i class="far fa-trash-alt"></i>
+                      </a></td>
+                  </tr>
+              <?php
+                endforeach;
+              ?>
             </tbody>
           </table>
 
@@ -90,17 +106,17 @@
     ?>
   </div>
   <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...<form action="noticia_salvar.php" method="POST" character_set="UTF-8" enctype="multipart/form-data">
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cadastro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="POST" character_set="UTF-8" enctype="multipart/form-data">
             <div class="form-group">
               <label for="titulo-noticia">Título</label>
               <input type="text" class="form-control" id="titulo_noticia" name="titulo_noticia" required />
@@ -109,22 +125,12 @@
               <label for="chamada-noticia">Chamada</label>
               <input type="text" class="form-control" id="chamada_noticia" name="chamada_noticia" required />
             </div>
+            
             <div class="form-group">
-              <label for="texto-noticia">Texto</label>
-              <textarea class="form-control" rows="7" id="texto-noticia" name="texto_noticia" required ></textarea>
+              <label for="btn-uptload">Imagem</label>
+              <input type="file" class="form-control-file" id="btn-uptload" name="imagem">
             </div>
-            <br />
-            <div class="form-group">
-              <div class="col-md-3">
-                <label class="btn btn-default btn-file" for="btn-upload">Procurar Imagem
-                <input type="file" style="display: none;" name="imagem" id="btn-upload" required/>
-                </label>
-              </div>
-              <div class="col-md-9">
-                <input id="upload-file" class="form-control" placeholder="Nenhum arquivo selecionado. (460px - 430px)" disabled="disabled" />
-              </div>
-            </div>
-            <br /><br />
+            
             <div class="form-group">
               <label for="data-noticia">Data da Notícia</label>
               <input type="date" class="form-control data" id="data-noticia" name="data-noticia" required />
@@ -133,21 +139,25 @@
               <label for="fonte-noticia">Fonte da Notícia</label>
               <input type="text" class="form-control" id="fonte-noticia" name="fonte-noticia" required />
             </div>
-
-              <div class="botao-grupo float-right">
-                <input type="submit" class="btn btn-lg btn-success botao-form" name="Salvar" />
-                <input type="reset" class="btn btn-lg btn-danger botao-form btn-cancelar" name="Cancelar" />
-             </div>
-            
+            <div class="form-group">
+              <label for="texto-noticia">Texto</label>
+              <textarea class="form-control" rows="15" id="texto-noticia" name="texto_noticia" required ></textarea>
+            </div>
+            <div class="botao-grupo float-right">
+              <button type="submit" class="btn btn-success botao-form" name="metodo" value="POST">Salvar</button>
+              <input type="reset" class="btn btn-danger botao-form btn-cancelar" name="Cancelar" />
+            </div>
           </form>
+        </div>
+      
       </div>
-    
     </div>
   </div>
-</div>
   <!-- Bootstrap core JavaScript-->
   <script src="components/jquery/jquery-3.2.1.min.js"></script>
   <script src="components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
+  <script src="components/jquery-confirm/jquery-confirm.js" type="text/javascript"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

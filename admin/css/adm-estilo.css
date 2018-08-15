@@ -34,12 +34,18 @@ body#login-bg{
 	color: white;
 }
 
-h5{
+.resposta-erro{
 	color:#ff0000;
 	
 }
 
 .div-botoes{
 	margin-bottom:16px;
+}
+.jconfirm-box{
+	margin-top: 200px !important;
+}
+.jconfirm-box-container{
+	margin: 0 auto;
 }
 

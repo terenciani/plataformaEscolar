@@ -10,5 +10,6 @@
 	define('LIB_CONTROLLER',SITE_ROOT_ADMIN.DS.'controller');
 	define('LIB_DAO',SITE_ROOT_ADMIN.DS.'dao');
 	define('LIB_MODEL',SITE_ROOT_ADMIN.DS.'model');
-	define('LIB_INCLUDES',SITE_ROOT_ADMIN.DS.'includes');
+	define('LIB_INCLUDES',SITE_ROOT_ADMIN.DS.'includes');	
+	define('LIB_IMG_NOTICIAS',SITE_ROOT_ADMIN.DS.'imagens'.DS.'noticias');
 ?>

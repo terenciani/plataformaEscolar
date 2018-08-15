@@ -38,7 +38,7 @@
 					<input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required />
 				</div>
 			
-				<h5>
+				<h5 class="resposta-erro">
 					<?=$resposta['msg']?>
 				</h5>
 				<input class="btn btn-lg btn-default btn-block botao-logar" type="submit" value="Entrar" name="login" />
