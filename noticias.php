@@ -1,8 +1,8 @@
 <?php
 	require_once 'admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'NoticiasController.class.php';
+	include_once LIB_CONTROLLER.DS.'NoticiaController.class.php';
 	
-	$controller = new NoticiasController();
+	$controller = new NoticiaController();
 ?>
 <!DOCTYPE html>
 <html>
@@ -107,7 +107,7 @@
 				<?php
 						
 					else:
-						$noticias = $controller->getNoticias();
+						$noticias = $controller->buscarTodasNoticias();
 						//var_dump($bannersMural);
 						foreach ($noticias as $noticia):
 				?>
