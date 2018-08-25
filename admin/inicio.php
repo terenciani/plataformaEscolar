@@ -25,7 +25,7 @@
 	<body>
 		<div class="container-fluid">
 			<section class="container">
-			<h1>Marcelo Musculoso</h1>	
+			<
 				<div class="thumbnail" id="conteudo">
 					<h3><?php echo "Bem Vindo, " . $_SESSION['nome_usuario'] . "!";?></h3>
 					<div class="col-2 thumbnail item-menu">
