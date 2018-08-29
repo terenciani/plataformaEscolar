@@ -17,19 +17,19 @@
             <span class="nav-link-text">Notícias</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerência de Banners">
           <a class="nav-link" href="banner.php">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Gerência de Banners</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerência da Escola">
           <a class="nav-link" href="escola.php">
             <i class="fas fa-address-book"></i>
             <span class="nav-link-text"> Gerência da Escola </span>
           </a>
 
-          </a> <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          </a> <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerência de Equipe">
           <a class="nav-link" href="equipe.php">
           <i class="fas fa-users-cog"></i>
             <span class="nav-link-text">Gerência de Equipe</span>
