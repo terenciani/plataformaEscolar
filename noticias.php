@@ -1,4 +1,4 @@
-<?php
+ <?php
 	require_once 'admin/includes/init.php';
 	include_once LIB_CONTROLLER.DS.'NoticiaController.class.php';
 	
