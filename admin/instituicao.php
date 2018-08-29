@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <?php
+    require_once 'includes/init.php';
     include_once("includes/head.php");
-    include_once ("controller/EscolaController.class.php");
-    $controle = new EscolaController();
-    
-    if(isset($_POST["alterar"])){  
-        $dados = $controle->buscaDados();
-       // echo $dados;
-    }
+    include_once ("controller/InstituicaoController.class.php");
+    $controle = new InstituicaoController();
+
+    $escola = $controle->getInstituicao();
+
   ?>
   
 
@@ -32,19 +31,9 @@
 
       <div class="row" >
         <div class="col-12">
-          <button name="alterar" type="submit" class="btn btn-lg btn-success pull-right">
-                      Inserir Dados
-                  </button>
+          <button disable name="alterar" type="submit" class="btn btn-lg btn-success pull-right">Inserir Dados        </button>
         </div>
       </div>
-
-<div class="form-group">
-<input type="file" name="file" class="form-control btn-arquivo" >
-</div>
-
-
-        <img src="imagens/menu/wbstec-logo.png" title="Ensino Médio Integrado ao Curso Técnico em Informática" alt="Logo da Escola" class="img-fluid mx-auto d-block logo-escola">
-
       <div class="row">
         <div class="col-12">
           <form method="POST">
@@ -59,7 +48,9 @@
 
 <div class="form-group">
     <label for="exampleFormControlTextarea1">Missão da Escola</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" readonly>
+      <?=$escola->getMissao()?>
+    </textarea>
   </div>
 
 <div class="form-group">
@@ -94,7 +85,6 @@
   <!-- Bootstrap core JavaScript-->
   <script src="components/jquery/jquery-3.2.1.min.js"></script>
   <script src="components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

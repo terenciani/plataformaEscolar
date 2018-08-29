@@ -3,10 +3,11 @@
 		
 	
   	class BannerController {
-		public function buscarTodasNoticias() {
+
+		public function buscarTodosBanners() {
 			try {
 				$daoBanner = new DaoBanner();
-				return $daoBanner->listarNoticias();
+				return $daoBanner->listarBanners();
 			} catch (Exception $e) {
 				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 			}
@@ -33,7 +34,7 @@
 
 		public function excluirBanner($id) {
 			try {
-				$daoBanner = new DaoNoticia();
+				$daoBanner = new DaoBanner();
 				return $daoBanner->excluirBanner($id);
 			} catch (Exception $e) {
 				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";

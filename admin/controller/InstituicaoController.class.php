@@ -1,7 +1,7 @@
 <?php
 	include_once LIB_DAO.DS.'DaoInstituicao.class.php';
 	
-  	class InstitucionalController {
+  	class InstituicaoController {
   		
   		public function getInstituicao(){
   			try {
@@ -11,5 +11,16 @@
 				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 			}
   		}
+
+		public function alterarDadosDaEscola(){
+			try {
+				$dao = new DaoEscola(); 
+				return $dao->alterarDadosDaEscolaNoBanco();
+				
+			} catch (Exception $e) {
+				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+			}
+
+		}
 	}
 ?>
