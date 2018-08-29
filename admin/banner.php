@@ -1,90 +1,60 @@
-<html lang="pt-br"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>..:: Plataforma Escolar WBS ::..</title>
-    <!-- Bootstrap core CSS-->
-    <link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom fonts for this template-->
-    <link href="components/fontawesome-5.0.13/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
-    <!-- Custom styles for this template-->
-    
-    <link href="components/sbadmin/css/sb-admin.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/adm-estilo.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-confirm.css" type="text/css">
-    <link rel="shortcut icon" type="image/png" href="imagens/favicon.png">
-</head>  
+<!DOCTYPE html>
+<html lang="pt-br">
+  <?php
+    require_once 'includes/init.php';
+    include_once LIB_CONTROLLER.DS.'BannerController.class.php';
+    include_once("includes/head.php");
+    $controle  = new BannerController("BannerController.class.php");
+    if(isset($_GET['metodo'])){
+      if ($_GET['metodo'] == "DELETE") {
+        $controle->excluirBanner($_GET['id']);
+      }
+    }
+
+    if(isset($_POST['metodo'])){
+      $msg = $controle->salvarBanner($_POST, $_FILES);
+    }
+  ?>
+  
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Plataforma Escolar WBS</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Início">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-home"></i>
-            <span class="nav-link-text">Início</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Notícias">
-          <a class="nav-link" href="noticia.php">
-            <i class="far fa-newspaper"></i>
-            <span class="nav-link-text">Notícias</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="banner.php">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Gerência de Banners</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="escola.php">
-            <i class="fas fa-address-book"></i>
-            <span class="nav-link-text"> Gerência da Escola </span>
-          </a>
-
-           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="equipe.php">
-          <i class="fas fa-users-cog"></i>
-            <span class="nav-link-text">Gerência de Equipe</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Educação Profissional">
-          <a class="nav-link" href="profissional.php">
-            <i class="fas fa-graduation-cap"></i>
-            <span class="nav-link-text">Gerência de Educação Profissional</span>
-          </a>
-        </li>
-        
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#modalSair">
-            <i class="fa fa-fw fa-sign-out"></i>Sair</a>
-        </li>
-      </ul>
-    </ul></div>
-</nav>  <div class="content-wrapper">
+  <?php
+    include_once("includes/menu.php");
+  ?>
+  <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Início</a>
         </li>
-        <li class="breadcrumb-item active">Banner</li>
+        <li class="breadcrumb-item active">
+          Banners
+        </li>
       </ol>
      
         
       <div class="row"> 
-                <div class="col-12 div-botoes">
-          <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".bd-example-modal-lg">Cadastrar Banner</button>
+
+        <?php
+          if (isset($msg)):
+        ?>
+            <div class="col-12">
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <?=$msg?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        <?php
+          endif;
+        ?>
+        <div class="col-12 div-botoes">
+          <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".bd-example-modal-lg">
+              Cadastrar Banner
+          </button>
         </div>
         <div class="col-12">
           
@@ -97,7 +67,29 @@
                 <th scope="col">Opções</th>
               </tr>
             </thead>
-            
+
+            <tbody>
+              <?php
+                $banners  = $controle->buscarTodosBanners();
+                foreach ($banners as $banner):
+              ?>
+                  <tr>
+                    <td><?=$banner->getTitulo()?></td>
+                    <td><?=$banner->getData()?></td>
+                    <td><img src="imagens/banners/<?=$banner->getImagem()?>" width="100"></td>
+                    <td>
+                      <a href="banner_editar.php?id=<?=$banner->getId_banner()?>" title='Editar'>
+                        <i class="fas fa-pencil-alt"></i>
+                      </a>
+                      <a href="banner.php?metodo=DELETE&id=<?=$banner->getId_banner()?>" id='link-delete' title='Deletar'>
+                        <i class="far fa-trash-alt"></i>
+                      </a></td>
+                  </tr>
+              <?php
+                endforeach;
+              ?>
+            </tbody>
+
           </table>
 
           
@@ -143,18 +135,23 @@
         <div class="modal-header">
           <h5 class="modal-title">Cadastro</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
+
+            <span aria-hidden="true">&times;</span>
+
           </button>
         </div>
         <div class="modal-body">
           <form method="POST" character_set="UTF-8" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="titulo-noticia">Título</label>
-              <input type="text" class="form-control" id="titulo_noticia" name="titulo_noticia" required="">
+
+
+              <label for="titulo-banner">Título</label>
+              <input type="text" class="form-control" id="titulo_banner" name="titulo_banner" required />
             </div>
             <div class="form-group">
-              <label for="chamada-noticia">Chamada</label>
-              <input type="text" class="form-control" id="chamada_noticia" name="chamada_noticia" required="">
+              <label for="chamada-banner">Chamada</label>
+              <input type="text" class="form-control" id="chamada_banner" name="chamada_banner" required />
+
             </div>
             
             <div class="form-group">
@@ -162,21 +159,21 @@
               <input type="file" class="form-control-file" id="btn-uptload" name="imagem">
             </div>
             
-            <div class="form-group">
-              <label for="data-noticia">Data da Notícia</label>
-              <input type="date" class="form-control data" id="data-noticia" name="data-noticia" required="">
+              <label for="data-banner">Data do Banner</label>
+              <input type="date" class="form-control data" id="data-banner" name="data-banner" required />
             </div>
             <div class="form-group">
-              <label for="fonte-noticia">Fonte da Notícia</label>
-              <input type="text" class="form-control" id="fonte-noticia" name="fonte-noticia" required="">
+              <label for="fonte-banner">Fonte do Banner</label>
+              <input type="text" class="form-control" id="fonte-banner" name="fonte-banner" required />
             </div>
             <div class="form-group">
-              <label for="texto-noticia">Texto</label>
-              <textarea class="form-control" rows="15" id="texto-noticia" name="texto_noticia" required=""></textarea>
+              <label for="texto-banner">Texto</label>
+              <textarea class="form-control" rows="15" id="texto-banner" name="texto_banner" required ></textarea>
             </div>
             <div class="botao-grupo float-right">
               <button type="submit" class="btn btn-success botao-form" name="metodo" value="POST">Salvar</button>
-              <input type="reset" class="btn btn-danger botao-form btn-cancelar" name="Cancelar">
+              <input type="reset" class="btn btn-danger botao-form btn-cancelar" name="Cancelar" />
+
             </div>
           </form>
         </div>
@@ -190,6 +187,5 @@
   <script src="components/jquery-confirm/jquery-confirm.js" type="text/javascript"></script>
   <script src="js/script.js"></script>
 
-
-
-</body></html>
+</body>
+</html>
