@@ -63,7 +63,21 @@
 			<div class="pag-noticias border-gray">
 				<h1 class="div-label div-label-margin">Educação Profissional</h1>
 
-				<h1>Em Breve</h1>
+				<div id="Layout">
+					
+					<h1>O que é educação profissional</h1>
+					<p></p>
+
+					<h1>Como funciona</h1>
+					<p></p>
+
+					<h1>Histórico</h1>
+
+					<button>Ver foto</button>
+					<button>Equipe</button>
+					<button>Ver vídeos</button>
+
+				</div>
 				
 			</div>			
 		</div>
