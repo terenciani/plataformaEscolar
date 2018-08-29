@@ -7,7 +7,7 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Início">
           <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-dashboard"></i>
+            <i class="fas fa-home"></i>
             <span class="nav-link-text">Início</span>
           </a>
         </li>

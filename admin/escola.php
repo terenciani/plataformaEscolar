@@ -30,26 +30,47 @@
         </li>
       </ol>
 
+      <div class="row" >
+        <div class="col-12">
+          <button name="alterar" type="submit" class="btn btn-lg btn-success pull-right">
+                      Inserir Dados
+                  </button>
+        </div>
+      </div>
       <div class="row">
         <div class="col-12">
-
-            <form method="POST">
-                  <button name="alterar" type="submit" class="btn btn-lg btn-success pull-right">
-                      Alterar Dados
-                  </button>
+          <form method="POST">
                   
-                  <h3>Nome da Escola </h3>
+                  
+                  
+                 
 
-            </form>
-           
+<div class="form-group">
+<input type="file" name="file" class="form-control btn-arquivo" >
+</div>
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Missão da Escola</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+  </div>
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Nosso Objetivo</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Conheça Nossa História</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+
+
+</form>
 
 
 
 
-
-
-
-          
+         </div>
         </div>
       </div>
     </div>
@@ -59,7 +80,7 @@
     
     <?php
       include_once("includes/modal-sair.php");
-      include_once("includes/footer.php");
+      //include_once("includes/footer.php");
     ?>
   </div>
   <!-- Bootstrap core JavaScript-->
