@@ -23,10 +23,10 @@
             <span class="nav-link-text">Gerência de Banners</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerência da Escola">
-          <a class="nav-link" href="escola.php">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dados da Instituição">
+          <a class="nav-link" href="instituicao.php">
             <i class="fas fa-address-book"></i>
-            <span class="nav-link-text"> Gerência da Escola </span>
+            <span class="nav-link-text"> Dados da Instituição </span>
           </a>
 
           </a> <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerência de Equipe">
