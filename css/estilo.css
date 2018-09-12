@@ -615,11 +615,17 @@ img.icone-galeria{
 	font-family: sans-serif;
 	font-size: 50px;
 }
+#Layout-Profissional #imagens
+{
+	text-align: center;
+}
 #Layout-Profissional img
 {
-	width: 125px;
-	height: 125px;
+	width: 265px;
+	height: 250px;
 	background: black;
+	margin-right: 5px; 
+	margin-bottom: 7px;
 }
 #Layout-Profissional button
 {
@@ -628,4 +634,6 @@ img.icone-galeria{
 	width: 100px;
 	height: 40px;
 	border-radius: 30px;
+	font-size: 18px;
+	text-align: center;
 }
