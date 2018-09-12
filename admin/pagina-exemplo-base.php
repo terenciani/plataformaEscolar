@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-12">
           <h1>Nome da área</h1>
-          Aqui vai o conteúdo
+          Aqui vai o conteúd
         </div>
       </div>
     </div>

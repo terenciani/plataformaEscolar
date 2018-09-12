@@ -58,5 +58,7 @@ $(function(){
 	$('#btn-habilitar').on('click', function(){
 		$('#missao').removeAttr('disabled');
 		$('#objetivo').removeAttr('disabled');
+		$('#historia').removeAttr('disabled');
+		$('#telefone').removeAttr('disabled');
 	});
 });
