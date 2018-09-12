@@ -59,13 +59,15 @@
   </div>
 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Conheça Nossa História</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+    <label for="historia">Conheça Nossa História</label>
+    <textarea class="form-control" id="historia" rows="5"
+    disabled="disabled"></textarea>
   </div>
 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Número de Telefone</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    <label for="telefone">Número de Telefone</label>
+    <textarea class="form-control" id="telefone" rows="1"
+    disabled="disabled"></textarea>
   </div>
 
 </form>
