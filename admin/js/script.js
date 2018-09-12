@@ -51,3 +51,12 @@ $(function(){
 		$("#img-extra").append('<div class="col-md-3"><label class="btn btn-default btn-file">Procurar Imagem<input type="file" style="display: none;" name="img[]" required/></label></div><div class="col-md-9"><input id="upload-file" class="form-control" placeholder="Nenhum arquivo selecionado." disabled="disabled" /></div>');
 	});
 });
+
+
+
+$(function(){
+	$('#btn-habilitar').on('click', function(){
+		$('#missao').removeAttr('disabled');
+		$('#objetivo').removeAttr('disabled');
+	});
+});

@@ -31,7 +31,7 @@
 
       <div class="row" >
         <div class="col-12">
-          <button disable name="alterar" type="submit" class="btn btn-lg btn-success pull-right">Inserir Dados        </button>
+          <button disable name="alterar" type="submit" class="btn btn-lg btn-success pull-right" id="btn-habilitar">Inserir Dados        </button>
         </div>
       </div>
       <div class="row">
@@ -47,15 +47,15 @@
 </div>
 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Missão da Escola</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" readonly>
+    <label for="missao">Missão da Escola</label>
+    <textarea class="form-control" id="missao" name="missao" class="editavel" rows="4" disabled="disabled">
       <?=$escola->getMissao()?>
     </textarea>
   </div>
 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Nosso Objetivo</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="objetivo">Nosso Objetivo</label>
+    <textarea class="form-control" id="objetivo" name="objetivo" class="editavel" rows="3" disabled="disabled"></textarea>
   </div>
 
 <div class="form-group">
@@ -85,6 +85,7 @@
   <!-- Bootstrap core JavaScript-->
   <script src="components/jquery/jquery-3.2.1.min.js"></script>
   <script src="components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
