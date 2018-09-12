@@ -599,3 +599,31 @@ img.icone-galeria{
 .checked{
 	background-color: #7620206e !important;
 }
+
+
+/*Estilo profissional*/
+
+#Layout-Profissional
+{
+	background: none;
+	text-align: center;
+}
+#Layout-Profissional h1
+{
+	font-family: sans-serif;
+	font-size: 50px;
+}
+#Layout-Profissional img
+{
+	width: 125px;
+	height: 125px;
+	background: black;
+}
+#Layout-Profissional button
+{
+	background: black;
+	color: white;
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+}

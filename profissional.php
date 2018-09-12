@@ -63,21 +63,29 @@
 			<div class="pag-noticias border-gray">
 				<h1 class="div-label div-label-margin">Educação Profissional</h1>
 
-				<div id="Layout">
+	<div id="Layout-Profissional">
 					
-					<h1>O que é educação profissional</h1>
-					<p></p>
+		<h1>O que é educação profissional</h1>
+		<p></p>
 
-					<h1>Como funciona</h1>
-					<p></p>
+		<h1>Como funciona</h1>
+		<p></p>
 
-					<h1>Histórico</h1>
+		<h1>Histórico</h1>
 
-					<button>Ver foto</button>
-					<button>Equipe</button>
-					<button>Ver vídeos</button>
+		<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+		<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+		<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+		<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+		<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+		<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+		<br/>
 
-				</div>
+		<button>Ver foto</button>
+		<button>Equipe</button>
+		<button>Ver vídeos</button>
+
+	</div>
 				
 			</div>			
 		</div>
