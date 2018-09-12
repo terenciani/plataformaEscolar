@@ -12,66 +12,6 @@
  
         return self::$instancia;
       }
-   public function getBannerCarousel() {
-      try {
-        $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'ROTATIVO' ORDER BY data DESC";
-        $result = Conexao::getInstancia()->query($sql);
-        $lista = $result->fetchAll(PDO::FETCH_ASSOC);
-        $f_lista = array();
-        foreach ($lista as $l)
-          $f_lista[] = $this->populaBanner($l);
-        return $f_lista;
-      } catch (Exception $e) {
-        print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-      }
-    }
-    public function getBannerPromocional() {
-      try {
-        $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'PROMOCAO' ORDER BY data DESC LIMIT 1";
-        $result = Conexao::getInstancia()->query($sql);
-        $banner = $result->fetchObject('Banner');
-        
-        return $banner;
-      } catch (Exception $e) {
-        print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-      }
-    }
-    public function getBannerEquipe() {
-      try {
-        $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'EQUIPE' ORDER BY data DESC LIMIT 1";
-        $result = Conexao::getInstancia()->query($sql);
-        $banner = $result->fetchObject('Banner');
-        
-        return $banner;
-      } catch (Exception $e) {
-        print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-      }
-    }
-    public function getBannersMural() {
-      try {
-        $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'MURAL' ORDER BY data DESC LIMIT 4";
-        $result = Conexao::getInstancia()->query($sql);
-        $lista = $result->fetchAll(PDO::FETCH_ASSOC);
-        $f_lista = array();
-        foreach ($lista as $l)
-          $f_lista[] = $this->populaBanner($l);
-        return $f_lista;
-      } catch (Exception $e) {
-        print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-      }
-    }
-    private function populaBanner($row) {
-      $banner = new Banner();
-      $banner->setId_banner($row['id_banner']);
-      $banner->setTitulo($row['titulo']);
-      $banner->setLink($row['link']);
-      $banner->setAlt($row['alt']);
-      $banner->setImagem($row['imagem']);
-      $banner->setPosicao($row['posicao']);
-      $banner->setData($row['data']);
-      $banner->setAtivo($row['ativo']);
-      return $banner;
-    }
       public function getNextID() {
         try {
             $sql = "SELECT Auto_increment FROM information_schema.tables WHERE table_name='tb_banner'";
@@ -82,6 +22,67 @@
             print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
         }
       }
+      public function getBannerCarousel() {
+        try {
+          $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'ROTATIVO' ORDER BY data DESC";
+          $result = Conexao::getInstancia()->query($sql);
+          $lista = $result->fetchAll(PDO::FETCH_ASSOC);
+          $f_lista = array();
+          foreach ($lista as $l)
+            $f_lista[] = $this->populaBanner($l);
+          return $f_lista;
+        } catch (Exception $e) {
+          print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+        }
+      }
+      public function getBannerPromocional() {
+        try {
+          $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'PROMOCAO' ORDER BY data DESC LIMIT 1";
+          $result = Conexao::getInstancia()->query($sql);
+          $banner = $result->fetchObject('Banner');
+          
+          return $banner;
+        } catch (Exception $e) {
+          print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+        }
+      }
+      public function getBannerEquipe() {
+        try {
+          $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'EQUIPE' ORDER BY data DESC LIMIT 1";
+          $result = Conexao::getInstancia()->query($sql);
+          $banner = $result->fetchObject('Banner');
+          
+          return $banner;
+        } catch (Exception $e) {
+          print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+        }
+      }
+      public function getBannersMural() {
+        try {
+          $sql = "SELECT * FROM tb_banner WHERE ativo=1 AND posicao = 'MURAL' ORDER BY data DESC LIMIT 4";
+          $result = Conexao::getInstancia()->query($sql);
+          $lista = $result->fetchAll(PDO::FETCH_ASSOC);
+          $f_lista = array();
+          foreach ($lista as $l)
+            $f_lista[] = $this->populaBanner($l);
+          return $f_lista;
+        } catch (Exception $e) {
+          print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+        }
+      }
+      private function populaBanner($row) {
+        $banner = new Banner();
+        $banner->setId_banner($row['id_banner']);
+        $banner->setTitulo($row['titulo']);
+        $banner->setLink($row['link']);
+        $banner->setAlt($row['alt']);
+        $banner->setImagem($row['imagem']);
+        $banner->setPosicao($row['posicao']);
+        $banner->setData($row['data']);
+        $banner->setAtivo($row['ativo']);
+        return $banner;
+      }
+      
    
       public function getBannerPorId($id) {
         try {
@@ -97,7 +98,7 @@
    
       public function listarBannersPrincipais() {
         try {
-            $sql = "SELECT * FROM tb_banner WHERE ativa=1 order by data desc LIMIT 2";
+            $sql = "SELECT * FROM tb_banner WHERE ativo=1 order by data desc LIMIT 2";
             $result = Conexao::getInstancia()->query($sql);
             $lista = $result->fetchAll(PDO::FETCH_ASSOC);
             $f_lista = array();
@@ -112,7 +113,7 @@
       }
       public function listarBanners() {
         try {
-            $sql = "SELECT * FROM tb_banner WHERE ativa=1 order by data desc";
+            $sql = "SELECT * FROM tb_banner WHERE ativo=1 order by data desc";
             $result = Conexao::getInstancia()->query($sql);
             $lista = $result->fetchAll(PDO::FETCH_ASSOC);
             $f_lista = array();
@@ -130,25 +131,25 @@
       public function salvarBanner($dadosFormulario, $dadosImagem){
         // Armazena os dados vindo do formul?rio
         $titulo       = $dadosFormulario['titulo_banner'];
-        $chamada      = $dadosFormulario['chamada_banner'];
-        $texto        = $dadosFormulario['texto_banner'];
-        $imagem       = $dadosImagem['imagem'];
-        $dataOriginal = $dadosFormulario['data-banner'];
-        $fonte        = $dadosFormulario['fonte-banner'];
+        $link         = $dadosFormulario['link_banner'];
+        $alt          = $dadosFormulario['alt_banner'];
+        $imagem       = $dadosImagem['imagem_banner'];
+        $data         = $dadosFormulario['data_banner'];
+        $ativo        = $dadosFormulario['ativo_banner'];
 
         // Se a foto estiver sido selecionada
         if (!empty($imagem["name"])) {
           $nomeImagem = $this->uploadImagem($imagem);
           
           try{
-            $sql = "INSERT INTO tb_banner VALUES ('', :titulo, :chamada, :nomeImagem, :texto, :dataOriginal, :fonte, 1)";
+            $sql = "INSERT INTO tb_banner VALUES ($titulo, $link, $alt, $imagem, $posicao, $data, 1)";
             $p_sql = Conexao::getInstancia()->prepare($sql);
-            $p_sql->bindValue(":titulo", $titulo);
-            $p_sql->bindValue(":chamada", $chamada);
-            $p_sql->bindValue(":nomeImagem", $nomeImagem);
-            $p_sql->bindValue(":texto", $texto);
-            $p_sql->bindValue(":dataOriginal", $dataOriginal);
-            $p_sql->bindValue(":fonte", $fonte);
+            $p_sql->bindValue("titulo", $titulo);
+            $p_sql->bindValue("link", $link);
+            $p_sql->bindValue("alt", $alt);
+            $p_sql->bindValue("imagem", $imagem);
+            $p_sql->bindValue("posicao", $posicao);
+            $p_sql->bindValue("data", $data);
             $result = $p_sql->execute();
             // Se os dados forem inseridos com sucesso
             if ($result){

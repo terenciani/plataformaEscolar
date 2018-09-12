@@ -149,32 +149,33 @@
               <input type="text" class="form-control" id="titulo_banner" name="titulo_banner" required />
             </div>
             <div class="form-group">
-              <label for="chamada-banner">Chamada</label>
-              <input type="text" class="form-control" id="chamada_banner" name="chamada_banner" required />
+              <label for="link-banner">Link</label>
+              <input type="text" class="form-control" id="link_banner" name="link_banner" required />
 
             </div>
             
             <div class="form-group">
               <label for="btn-uptload">Imagem</label>
-              <input type="file" class="form-control-file" id="btn-uptload" name="imagem">
+              <input type="file" class="form-control-file" id="btn-uptload" name="imagem" required />
             </div>
-            
+            <div class="form-group">
               <label for="data-banner">Data do Banner</label>
-              <input type="date" class="form-control data" id="data-banner" name="data-banner" required />
-            </div>
-            <div class="form-group">
-              <label for="fonte-banner">Fonte do Banner</label>
-              <input type="text" class="form-control" id="fonte-banner" name="fonte-banner" required />
-            </div>
-            <div class="form-group">
-              <label for="texto-banner">Texto</label>
-              <textarea class="form-control" rows="15" id="texto-banner" name="texto_banner" required ></textarea>
+              <input type="date" class="form-control data" id="data-banner" name="data_banner" required />
             </div>
             <div class="botao-grupo float-right">
-              <button type="submit" class="btn btn-success botao-form" name="metodo" value="POST">Salvar</button>
-              <input type="reset" class="btn btn-danger botao-form btn-cancelar" name="Cancelar" />
-
+              <button type="submit" class="btn btn-success botao-form" name="metodo" value="POST">Salvar</button> 
+              <input type="reset" class="btn btn-danger botao-form btn-cancelar" name="Cancelar">
             </div>
+          </div>
+            <!--<div class="form-group">
+              <label for="fonte-banner">Fonte do Banner</label>
+              <input type="text" class="form-control" id="fonte-banner" name="fonte-banner" required />
+            </div>--->
+            <!--<div class="form-group">
+              <label for="texto-banner">Texto</label>
+              <textarea class="form-control" rows="15" id="texto-banner" name="texto_banner" required ></textarea>
+            </div>--->
+            
           </form>
         </div>
       
