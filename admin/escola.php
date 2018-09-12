@@ -41,10 +41,6 @@
 <div class="form-group">
 <input type="file" name="file" class="form-control btn-arquivo" >
 </div>
-
-
-        <img src="imagens/menu/wbstec-logo.png" title="Ensino Médio Integrado ao Curso Técnico em Informática" alt="Logo da Escola" class="img-fluid mx-auto d-block logo-escola">
-
       <div class="row">
         <div class="col-12">
           <form method="POST">

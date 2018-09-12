@@ -41,10 +41,10 @@
                   
                   
                  
-
+  
 <div class="form-group">
-<input type="file" name="file" class="form-control btn-arquivo" >
-</div>
+    <input type="file" name="file" class="form-control btn-arquivo" >
+    </div>
 
 <div class="form-group">
     <label for="missao">Missão da Escola</label>
@@ -63,6 +63,10 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
   </div>
 
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Número de Telefone</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+  </div>
 
 </form>
 
