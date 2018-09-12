@@ -1,8 +1,8 @@
 <?php
 	require_once 'admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'InstitucionalController.class.php';
+	include_once LIB_CONTROLLER.DS.'InstituicaoController.class.php';
 
-	$controller = new InstitucionalController();
+	$controller = new InstituicaoController();
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,6 +91,7 @@
 			<h1 class="div-label">Conheça Nossa História</h1>
 			<div class="texto-institucional historico">	
 				<?=$instituicao->getHistorico()?>
+				<button>editar</button>
 
 				<p class="alteracao"> Texto alterado em: <?=$instituicao->getData()?> </p>
 			</div>
