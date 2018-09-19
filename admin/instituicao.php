@@ -79,6 +79,7 @@
     <textarea class="form-control" id="Email" rows="1"
     disabled="disabled"> <?=$escola->getemail()?></textarea>
   </div>
+  
 </form>
 
 
