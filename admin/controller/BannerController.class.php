@@ -23,7 +23,7 @@
 		}
 
 		public function salvarBanner($dadosDoFormulario, $dadosDaImagem){
-			var_dump($dadosDaImagem);
+			
 			try {
 				$daoBanner = new DaoBanner();
 				return $daoBanner->salvarBanner($dadosDoFormulario, $dadosDaImagem);

@@ -143,20 +143,30 @@
         <div class="modal-body">
           <form method="POST" character_set="UTF-8" enctype="multipart/form-data">
             <div class="form-group">
-
-
-              <label for="titulo-banner">Título</label>
+             <label for="titulo-banner">Título</label>
               <input type="text" class="form-control" id="titulo_banner" name="titulo_banner" required />
+            </div>
+            <div class="form-group">
+              <label for="alt-banner">Título secundário</label>
+              <input type="text" class="form-control" id="alt_banner" name="alt_banner" required />
+            </div>
+            <div class="form-group">
+              <label for="posicao">Posição do banner</label>
+              <select class="form-control" id="posicao" name="posicao_banner" required>
+                <option value=""> Selecione a posição do banner</option>
+                <option value="ROTATIVO">Banner Rotativo (900px / 250px) - Página Inicial</option>
+                <option value="PROMOCAO">Banner Promocial (1260px / 240px) - Página Inicial</option>
+                <option value="EQUIPE">Banner Equipe (1240px de largura) - Página Equipe</option>
+                <option value="MURAL">Banner Mural (195px - 80px)- Página Inicial</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="link-banner">Link</label>
               <input type="text" class="form-control" id="link_banner" name="link_banner" required />
-
-            </div>
-            
+            </div>            
             <div class="form-group">
               <label for="btn-uptload">Imagem</label>
-              <input type="file" class="form-control-file" id="btn-uptload" name="imagem" required />
+              <input type="file" class="form-control-file" id="btn-uptload" name="imagem_banner" required />
             </div>
             <div class="form-group">
               <label for="data-banner">Data do Banner</label>
@@ -166,16 +176,12 @@
               <button type="submit" class="btn btn-success botao-form" name="metodo" value="POST">Salvar</button> 
               <input type="reset" class="btn btn-danger botao-form btn-cancelar" name="Cancelar">
             </div>
-          </div>
-            <!--<div class="form-group">
-              <label for="fonte-banner">Fonte do Banner</label>
-              <input type="text" class="form-control" id="fonte-banner" name="fonte-banner" required />
-            </div>--->
-            <!--<div class="form-group">
-              <label for="texto-banner">Texto</label>
-              <textarea class="form-control" rows="15" id="texto-banner" name="texto_banner" required ></textarea>
-            </div>--->
-            
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="ativo_banner" value="1" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Ativar
+              </label>
+            </div>          
           </form>
         </div>
       

@@ -1,4 +1,5 @@
 <?php
+
   include_once LIB_INCLUDES.DS.'Conexao.class.php';
   include_once LIB_MODEL.DS.'Banner.class.php';
   
@@ -129,12 +130,14 @@
 
 
       public function salvarBanner($dadosFormulario, $dadosImagem){
+        
         // Armazena os dados vindo do formul?rio
         $titulo       = $dadosFormulario['titulo_banner'];
         $link         = $dadosFormulario['link_banner'];
         $alt          = $dadosFormulario['alt_banner'];
         $imagem       = $dadosImagem['imagem_banner'];
         $data         = $dadosFormulario['data_banner'];
+        $posicao      = $dadosFormulario['posicao_banner'];
         $ativo        = $dadosFormulario['ativo_banner'];
 
         // Se a foto estiver sido selecionada
@@ -142,14 +145,15 @@
           $nomeImagem = $this->uploadImagem($imagem);
           
           try{
-            $sql = "INSERT INTO tb_banner VALUES ($titulo, $link, $alt, $imagem, $posicao, $data, 1)";
+            $sql = "INSERT INTO tb_banner VALUES ( null,:titulo, :link, :alt, :imagem, :posicao, :data, :ativo)";
             $p_sql = Conexao::getInstancia()->prepare($sql);
             $p_sql->bindValue("titulo", $titulo);
             $p_sql->bindValue("link", $link);
             $p_sql->bindValue("alt", $alt);
-            $p_sql->bindValue("imagem", $imagem);
+            $p_sql->bindValue("imagem",  $nomeImagem);
             $p_sql->bindValue("posicao", $posicao);
             $p_sql->bindValue("data", $data);
+            $p_sql->bindValue("ativo", $ativo);
             $result = $p_sql->execute();
             // Se os dados forem inseridos com sucesso
             if ($result){
@@ -159,7 +163,7 @@
             }
             return $msg;
           }catch(Exception $e){
-            print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+            print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde." . $e->getMessage();
           }
         }
       }
