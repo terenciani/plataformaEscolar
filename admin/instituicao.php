@@ -31,7 +31,7 @@
 
       <div class="row" >
         <div class="col-12">
-          <button disable name="alterar" type="submit" class="btn btn-lg btn-success pull-right" id="btn-habilitar">Inserir Dados        </button>
+          <button disable name="alterar" type="submit" class="btn btn-lg btn-success pull-right" id="btn-habilitar">Editar Dados        </button>
         </div>
       </div>
       <div class="row">
@@ -55,19 +55,25 @@
 
 <div class="form-group">
     <label for="objetivo">Nosso Objetivo</label>
-    <textarea class="form-control" id="objetivo" name="objetivo" class="editavel" rows="3" disabled="disabled"></textarea>
+    <textarea class="form-control" id="objetivo" name="objetivo" class="editavel" rows="3" disabled="disabled">
+      <?=$escola->getVisao()?>
+    </textarea>
   </div>
 
 <div class="form-group">
     <label for="historia">Conheça Nossa História</label>
     <textarea class="form-control" id="historia" rows="5"
-    disabled="disabled"></textarea>
+    disabled="disabled">
+       <?=$escola->getValores()?>
+    </textarea>
   </div>
 
 <div class="form-group">
     <label for="telefone">Número de Telefone</label>
     <textarea class="form-control" id="telefone" rows="1"
-    disabled="disabled"></textarea>
+    disabled="disabled">
+       <?=$escola->getTelefone()?>
+    </textarea>
   </div>
 
 </form>
