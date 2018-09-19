@@ -71,11 +71,14 @@
 <div class="form-group">
     <label for="telefone">Número de Telefone</label>
     <textarea class="form-control" id="telefone" rows="1"
-    disabled="disabled">
-       <?=$escola->getTelefone()?>
-    </textarea>
+    disabled="disabled"> <?=$escola->getTelefone()?></textarea>
   </div>
 
+  <div class="form-group">
+    <label for="telefone">Email</label>
+    <textarea class="form-control" id="Email" rows="1"
+    disabled="disabled"> <?=$escola->getemail()?></textarea>
+  </div>
 </form>
 
 
