@@ -48,6 +48,7 @@
               <input type="file" name="file" class="form-control btn-arquivo" >
             </div>
 
+
             <div class="form-group">
               <label for="missao">Missão da Escola</label>
               <textarea class="form-control" id="missao" name="missao" class="editavel" rows="4" disabled="disabled"><?=$escola->getMissao()?></textarea>
@@ -77,7 +78,6 @@
             </div>
             <button type="submit" name="btn-enviar" value="atualizar">Salvar Informações</button> 
           </form>
-
 
 
 
