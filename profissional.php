@@ -63,16 +63,22 @@
 			<div class="pag-noticias border-gray">
 				<h1 class="div-label div-label-margin">Educação Profissional</h1>
 
-	<div id="Layout-Profissional">
+	<div id="Page-Pro">
 					
-		<h1>O que é educação profissional</h1>
-		<p></p>
+		<h2>O que é educação profissional</h2>
+		<div class="c-t">
+			<p>A Educação Profissional é uma Modalidade de Ensino encontrada na Educação Básica, sua oferta se dá através de Cursos Técnicos, de Formação Inicial e Continuada.</p>
+		</div>
 
-		<h1>Como funciona</h1>
-		<p></p>
+		<h2>Como funciona</h2>
+		<div class="c-t">
+			<p></p>
+		</div>
 
-		<h1>Histórico</h1>
-		<p></p>
+		<h2>Histórico</h2>
+		<div class="c-t">
+			<p></p>
+		</div>
 
 		<div id="imagens">
 
