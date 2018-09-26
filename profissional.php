@@ -72,12 +72,14 @@
 
 		<h2>Como funciona</h2>
 		<div class="c-t">
-			<p></p>
+			<p>Educação Profissional é uma Modalidade de Ensino encontrada na Educação Básica, sua ofertase dá através de Cursos Técnicos, de Formação Inicial e Continuada</p>
 		</div>
 
 		<h2>Histórico</h2>
 		<div class="c-t">
-			<p></p>
+			<p>
+				
+			</p>
 		</div>
 
 		<div id="imagens">
