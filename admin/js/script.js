@@ -60,5 +60,6 @@ $(function(){
 		$('#objetivo').removeAttr('disabled');
 		$('#historia').removeAttr('disabled');
 		$('#telefone').removeAttr('disabled');
+		$('#email').removeAttr('disabled');
 	});
 });

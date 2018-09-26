@@ -12,10 +12,10 @@
 			}
   		}
 
-		public function alterarDadosDaEscola(){
+		public function alterarDadosDaInstituicao($dadosDoFormulario){
 			try {
-				$dao = new DaoEscola(); 
-				return $dao->alterarDadosDaEscolaNoBanco();
+				$dao = new DaoInstituicao(); 
+				return $dao->alterarDadosDaInstituicaoNoBanco($dadosDoFormulario);
 				
 			} catch (Exception $e) {
 				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
