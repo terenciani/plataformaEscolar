@@ -170,6 +170,13 @@
       
       public function excluirBanner($id) {
         try {
+            $banner = $this->getBannerPorId($id);
+            
+            echo LIB_IMG_BANNERS.DS.$banner->getImagem();
+            unlink(LIB_IMG_BANNERS.DS.$banner->getImagem());
+            
+
+
             $sql = "DELETE FROM tb_banner WHERE id_banner=:id";
             $p_sql = Conexao::getInstancia()->prepare($sql);
             $p_sql->bindValue(":id", $id);
@@ -196,17 +203,17 @@
      
         // Verifica se a largura da imagem ? maior que a largura permitida
         if($dimensoes[0] > $largura) {
-          $error[2] = "A largura da imagem n?o deve ultrapassar ".$largura." pixels";
+          $error[2] = "A largura da imagem não deve ultrapassar ".$largura." pixels";
         }
      
         // Verifica se a altura da imagem ? maior que a altura permitida
         if($dimensoes[1] > $altura) {
-          $error[3] = "Altura da imagem n?o deve ultrapassar ".$altura." pixels";
+          $error[3] = "Altura da imagem não deve ultrapassar ".$altura." pixels";
         }
 
         // Verifica se o tamanho da imagem ? maior que o tamanho permitido
         if($imagem["size"] > $tamanho) {
-          $error[4] = "A imagem deve ter no m?ximo ".$tamanho." bytes";
+          $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
         }
 
         // Pega extens?o da imagem
