@@ -47,21 +47,21 @@
     </div>
 
 <div class="form-group">
-    <label for="missao">Missão da Escola</label>
+    <label title="Missão da Escola" for="missao">Missão da Escola</label>
     <textarea class="form-control" id="missao" name="missao" class="editavel" rows="4" disabled="disabled">
       <?=$escola->getMissao()?>
     </textarea>
   </div>
 
 <div class="form-group">
-    <label for="objetivo">Nosso Objetivo</label>
+    <label title="Nosso Objetivo" for="objetivo">Nosso Objetivo</label>
     <textarea class="form-control" id="objetivo" name="objetivo" class="editavel" rows="3" disabled="disabled">
       <?=$escola->getVisao()?>
     </textarea>
   </div>
 
 <div class="form-group">
-    <label for="historia">Conheça Nossa História</label>
+    <label title="Conheça Nossa História" for="historia">Conheça Nossa História</label>
     <textarea class="form-control" id="historia" rows="5"
     disabled="disabled">
        <?=$escola->getValores()?>
@@ -69,13 +69,13 @@
   </div>
 
 <div class="form-group">
-    <label for="telefone">Número de Telefone</label>
+    <label title="Número de Telefone" for="telefone">Número de Telefone</label>
     <textarea class="form-control" id="telefone" rows="1"
     disabled="disabled"> <?=$escola->getTelefone()?></textarea>
   </div>
 
   <div class="form-group">
-    <label for="telefone">Email</label>
+    <label title="Email" for="telefone">Email</label>
     <textarea class="form-control" id="Email" rows="1"
     disabled="disabled"> <?=$escola->getemail()?></textarea>
   </div>
