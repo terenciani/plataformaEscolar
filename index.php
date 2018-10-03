@@ -3,11 +3,12 @@
 	include_once LIB_CONTROLLER.DS.'IndexController.class.php';
 	
 	$controller = new IndexController();
+	$instituicao = $controller->getInstituicao();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>..:: EEWBS ::..</title>
+	<title>..:: <?=$instituicao->getSigla()?>::..</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Site institucional da Escola Estadual Waldemir Barros da Silva" />
@@ -43,6 +44,7 @@
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="institucional.php">INSTITUCIONAL</a>
 					</li>
+					
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="profissional.php">EDUCAÇÃO PROFISSIONAL</a>
 					</li>

@@ -1,5 +1,7 @@
 <?php
   class Instituicao {
+    private $nome;
+    private $sigla;
 		private $data;
 		private $visao;
 		private $missao;
@@ -13,14 +15,30 @@
     private $youtube;
     private $facebook;
 
-		public function getData() {
-      $timestamp = strtotime($this->data); 
-      return date('d/m/Y', $timestamp); 
+		public function getSigla() {
+      return $sigla; 
   	}
 
-  	public function setData($data) {
-    	$this->data = $data;
+  	public function setSigla($sigla) {
+    	$this->sigla = $sigla;
   	}
+
+    public function getNome() {
+      return $nome; 
+    }
+
+    public function setNome($nome) {
+      $this->nome = $nome;
+    }
+
+    public function getData() {
+      $timestamp = strtotime($this->data); 
+      return date('d/m/Y', $timestamp); 
+    }
+
+    public function setData($data) {
+      $this->data = $data;
+    }
 
   	public function getVisao() {
       return $this->visao;
