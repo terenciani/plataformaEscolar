@@ -51,7 +51,7 @@
             <span class="nav-link-text"> Gerência da Escola </span>
           </a>
 
-           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Equipe WBS">
           <a class="nav-link" href="equipe.php">
           <i class="fas fa-users-cog"></i>
             <span class="nav-link-text">Gerência de Equipe</span>
@@ -98,10 +98,26 @@
               </tr>
             </thead>
             <tbody>
+
+               <tr>
+                      <td><img src="imagens/equipe/avatar.jpg" width="100"></td>
+                      <td>PePe</td>
+                      <td>Dedinho</td>
+                      
+                      <td>
+                        <a href="noticia_editar.php?id=14" title="Editar">
+                          <i class="fas fa-pencil-alt"></i>
+                        </a>
+                        <a href="noticia.php?metodo=DELETE&amp;id=14" id="link-delete" title="Deletar">
+                          <i class="far fa-trash-alt"></i>
+                        </a>
+                      </td>
+                  </tr>
+
                   <tr>
-                      <td><img src="imagens/equipe/avatar.png" width="100"></td>
-                      <td>Coruja</td>
-                      <td>CruCru</td>
+                      <td><img src="imagens/equipe/mini.jpg" width="100" height="100"></td>
+                      <td>Bolsominion</td>
+                      <td>Bolacha ou Biscoito?</td>
                       
                       <td>
                         <a href="noticia_editar.php?id=14" title="Editar">
@@ -114,8 +130,8 @@
                   </tr>
                   <tr>
                     <td><img src="imagens/equipe/homem.jpg" width="100"></td>
-                      <td>Aranha</td>
-                      <td>Pxiu</td>
+                      <td>HiT</td>
+                      <td>Wyllyzinho</td>
                       
                       <td>
                         <a href="noticia_editar.php?id=14" title="Editar">

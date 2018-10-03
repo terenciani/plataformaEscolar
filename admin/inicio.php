@@ -53,7 +53,7 @@
 					</div>
 
 					<div class="col-sm-2 thumbnail item-menu">
-						<a href="equipe.php" title="Alterar Dados da Escola" >Gerenciar <br /> Equipe </a>
+						<a href="equipe.php" title="Alterar Dados da Equipe" >Gerenciar <br /> Equipe </a>
 					</div>
 				</div>
 			</section>
