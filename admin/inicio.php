@@ -44,6 +44,10 @@
 					<div class="col-sm-2 thumbnail item-menu">
 						<a href="escola.php" title="Alterar Dados da Escola" >Gerenciar <br /> Dados Da Escola </a>
 					</div>
+
+					<div class="col-sm-2 thumbnail item-menu">
+						<a href="equipe.php" title="Alterar Dados da Escola" >Gerenciar <br /> Equipe </a>
+					</div>
 				</div>
 			</section>
 			<a href="?sair=true">Sair</a>
