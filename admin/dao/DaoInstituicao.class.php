@@ -47,24 +47,39 @@
 						VALUES (
 							:data,
 							:nome,
-							:visao,
+							:logoPrincipal,
+							:logoSecundaria,
+							:slogan,
 							:missao,
+							:visao,
 							:valores,
 							:historico,
 							:endereco,
 							:telefone,
+							:telefoneAlternativo,
+							:destinatarioContato
 							:email,
+							:facebook,
+							:youtube,
 							)";
 
 				$p_sql = Conexao::getInstancia()->prepare($sql);
 				$p_sql->bindValue(":data", date('Y-m-d'));
-				$p_sql->bindValue(":visao", $dadosDoFormulario['visao']);
+				$p_sql->bindValue(":nome", $dadosDoFormulario['nome']);
+				$p_sql->bindValue(":logoPrincipal", $dadosDoFormulario['logoPrincipal']);
+				$p_sql->bindValue(":logoSecundaria", $dadosDoFormulario['logoSecundaria']);
+				$p_sql->bindValue(":slogan", $dadosDoFormulario['slogan']);
 				$p_sql->bindValue(":missao", $dadosDoFormulario['missao']);
+				$p_sql->bindValue(":visao", $dadosDoFormulario['visao']);
 				$p_sql->bindValue(":valores", $dadosDoFormulario['valores']);
 				$p_sql->bindValue(":historico", $dadosDoFormulario['historico']);
 				$p_sql->bindValue(":endereco", $dadosDoFormulario['endereco']);
 				$p_sql->bindValue(":telefone", $dadosDoFormulario['telefone']);
+				$p_sql->bindValue(":telefoneAlternativo", $dadosDoFormulario['telefoneAlternativo']);
+				$p_sql->bindValue(":destinatarioContato", $dadosDoFormulario['destinatarioContato']);
 				$p_sql->bindValue(":email", $dadosDoFormulario['email']);
+				$p_sql->bindValue(":facebook", $dadosDoFormulario['facebook']);
+				$p_sql->bindValue(":youtube", $dadosDoFormulario['youtube']);
 
 	          	$p_sql->execute();
 
@@ -82,8 +97,12 @@
 			$instituicao = new Instituicao();
 
 			$instituicao->setData($row['data_alteracao']);
-			$instituicao->setVisao($row['visao']);
-			$instituicao->setMissao($row['missao']);
+			$instituicao->setData($row['nome']);
+			$instituicao->setData($row['logo_principal']);
+			$instituicao->setData($row['logo_secundaria']);
+			$instituicao->setData($row['slogan']);
+			$instituicao->setVisao($row['missao']);
+			$instituicao->setMissao($row['visao']);
 			$instituicao->setValores($row['valores']);
 			$instituicao->setHistorico($row['historico']);
 			$instituicao->setEndereco($row['endereco']);

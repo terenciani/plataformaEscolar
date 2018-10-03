@@ -3,8 +3,8 @@
     private $nome;
     private $sigla;
 		private $data;
-		private $visao;
 		private $missao;
+		private $visao;
     private $valores;
     private $historico;
     private $endereco;
