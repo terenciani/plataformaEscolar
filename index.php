@@ -32,7 +32,9 @@
 	?>
 	<nav class="navbar navbar-expand-lg navbar-light py-lg-4 menu-escola">
 		<div class="container">
-			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">EEWBS</a>
+			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">
+				<?=$instituicao->getSigla()?>
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -44,10 +46,11 @@
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="institucional.php">INSTITUCIONAL</a>
 					</li>
-					
+				<?php if ($instituicao->getTemProfissional()):?>
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="profissional.php">EDUCAÇÃO PROFISSIONAL</a>
 					</li>
+				<?php endif;?>
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="equipe.php">EQUIPE WBS</a>
 					</li>

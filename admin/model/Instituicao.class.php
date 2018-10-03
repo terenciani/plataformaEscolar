@@ -2,6 +2,7 @@
   class Instituicao {
     private $nome;
     private $sigla;
+    private $slogan;
 		private $data;
 		private $visao;
 		private $missao;
@@ -14,14 +15,11 @@
     private $email;
     private $youtube;
     private $facebook;
+    private $logoPrincipal;
+    private $logoAlternativa;
+    private $temProfissional;
 
-		public function getSigla() {
-      return $sigla; 
-  	}
-
-  	public function setSigla($sigla) {
-    	$this->sigla = $sigla;
-  	}
+		
 
     public function getNome() {
       return $nome; 
@@ -29,6 +27,22 @@
 
     public function setNome($nome) {
       $this->nome = $nome;
+    }
+
+    public function getSigla() {
+      return $sigla; 
+    }
+
+    public function setSigla($sigla) {
+      $this->sigla = $sigla;
+    }
+
+    public function getSlogan() {
+      return $slogan; 
+    }
+
+    public function setSlogan($slogan) {
+      $this->slogan = $slogan;
     }
 
     public function getData() {
@@ -109,6 +123,7 @@
     public function setEmail($email) {
       $this->email = $email;
     }
+
     public function getFacebook() {
       return  $this->facebook;
     }
@@ -116,12 +131,37 @@
     public function setFacebook($facebook) {
       $this->facebook = $facebook;
     }
+
+    public function getLogoPrincipal() {
+      return  $this->logoPrincipal;
+    }
+
+    public function setLogoPrincipal($logoPrincipal) {
+      $this->logoPrincipal = $logoPrincipal;
+    }
+
+    public function getLogoAlternativa() {
+      return  $this->logoAlternativa;
+    }
+
+    public function setLogoAlternativa($logoAlternativa) {
+      $this->logoAlternativa = $logoAlternativa;
+    }
+
     public function getYoutube() {
       return  $this->youtube;
     }
 
     public function setYoutube($youtube) {
       $this->youtube = $youtube;
+    } 
+
+    public function getTemProfissional() {
+      return  $this->temProfissional;
+    }
+
+    public function setTemProfissional($temProfissional) {
+      $this->temProfissional = $temProfissional;
     } 
 	}
 ?>
