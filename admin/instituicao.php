@@ -48,6 +48,20 @@
               <input type="file" name="file" class="form-control btn-arquivo" >
             </div>
 
+              <div class="form-group">
+              <label for="missao">Nome da Escola</label>
+              <textarea class="form-control" id="nome" name="nome" class="editavel" rows="4" disabled="disabled"><?=$escola->getNome()?></textarea>
+            </div>
+
+              <div class="form-group">
+              <label for="missao">Sigla da Escola</label>
+              <textarea class="form-control" id="sigla" name="sigla" class="editavel" rows="4" disabled="disabled"><?=$escola->getSigla()?></textarea>
+            </div>
+
+              <div class="form-group">
+              <label for="missao">Data</label>
+              <textarea class="form-control" id="data" name="data" class="editavel" rows="4" disabled="disabled"><?=$escola->getData()?></textarea>
+            </div>
 
             <div class="form-group">
               <label for="missao">Missão da Escola</label>
@@ -55,14 +69,26 @@
             </div>
 
             <div class="form-group">
-              <label for="objetivo">Nosso Objetivo</label>
-              <textarea class="form-control" id="objetivo" name="objetivo" class="editavel" disabled="disabled"><?=$escola->getVisao()?></textarea>
+              <label for="objetivo">Visão</label>
+              <textarea class="form-control" id="visao" name="visao" class="editavel" disabled="disabled"><?=$escola->getVisao()?></textarea>
             </div>
 
             <div class="form-group">
               <label for="historia">Conheça Nossa História</label>
-              <textarea class="form-control" id="historia"
-              disabled="disabled" name="historia"><?=$escola->getValores()?></textarea>
+              <textarea class="form-control" id="valores"
+              disabled="disabled" name="valores"><?=$escola->getValores()?></textarea>
+            </div>
+
+             <div class="form-group">
+              <label for="historia">Histórico</label>
+              <textarea class="form-control" id="historico"
+              disabled="disabled" name="historico"><?=$escola->getHistorico()?></textarea>
+            </div>
+
+             <div class="form-group">
+              <label for="historia">Endereço</label>
+              <textarea class="form-control" id="endereco"
+              disabled="disabled" name="endereco"><?=$escola->getEnderecoE()?></textarea>
             </div>
 
             <div class="form-group">
@@ -71,10 +97,30 @@
               disabled="disabled" name="telefone"> <?=$escola->getTelefone()?></textarea>
             </div>
 
+             <div class="form-group">
+              <label for="historia">Telefone Alternativo</label>
+              <textarea class="form-control" id="telefone-alternativo"
+              disabled="disabled" name="telefone-alternativo"><?=$escola->getTelefoneAltenativo()?></textarea>
+            </div>
+
+             <div class="form-group">
+              <label for="historia">Desinatarios de Contatos </label>
+              <textarea class="form-control" id="desinatarios-de-contato"
+              disabled="disabled" name="desinatarios-de-contato"><?=$escola->getDestinatariosDeContato()?></textarea>
+            </div>
+
             <div class="form-group">
               <label for="telefone">Email</label>
               <input class="form-control" id="email" name="email" 
               disabled="disabled" value="<?=$escola->getEmail()?>">
+            </div>
+              <div class="form-group">
+              <label for="missao">Histórico da Escola</label>
+              <textarea class="form-control" id="historico" name="historico" class="editavel" rows="4" disabled="disabled"><?=$escola->getHistorico()?></textarea>
+            </div>
+              <div class="form-group">
+              <label for="missao">Endereço da Escola</label>
+              <textarea class="form-control" id="endereco" name="endereco" class="editavel" rows="4" disabled="disabled"><?=$escola->getEndereco()?></textarea>
             </div>
             <button type="submit" name="btn-enviar" value="atualizar">Salvar Informações</button> 
           </form>
