@@ -20,9 +20,16 @@
 		<!--  Nucleo do jquery -->
 		<link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/adm-estilo.css" type="text/css" />
+		<link rel="stylesheet" href="css/jquery-confirm.css" type="text/css">
 		<link rel="shortcut icon" type="image/png" href="imagens/favicon.png"/>
+		<?php
+    include_once("includes/head.php");
+  ?>
 	</head>
-	<body>
+	<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+		<?php
+    include_once("includes/menu.php");
+  ?>
 		<div class="container-fluid">
 			<section class="container">
 			<

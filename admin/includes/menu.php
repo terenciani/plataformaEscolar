@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Início">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="inicio-novo.php">
             <i class="fas fa-home"></i>
             <span class="nav-link-text">Início</span>
           </a>
