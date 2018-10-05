@@ -3,70 +3,24 @@
 	include_once LIB_CONTROLLER.DS.'ContatoController.class.php';
 	
 	$controller = new ContatoController();
+	$instituicao = $controller->getInstituicao();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>..:: EEWBS ::..</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Site institucional da Escola Estadual Waldemir Barros da Silva" />
-    <meta name="author" content="Marcelo Figueiredo Terenciani" />
-    <meta name="robots" content="noindex">
-    
-    <link rel="shortcut icon" href="admin/imagens/menu/favicon.png" type="image/png">
-
-	<!-- Bootstrap core CSS -->
-    <link href="admin/components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!--FontAwesome-->
-	<link rel="stylesheet" href="admin/components/font-awesome-4.7.0/css/font-awesome.min.css" />
-
-	<!-- CSS padrao -->
-	<link rel="stylesheet" href="css/estilo.css" />
-	<link rel="stylesheet" href="css/queries.css" />
-</head>
+<?php
+	include_once 'includes/head.php';
+?>
 <body>
 	<?php
 		include_once 'includes/menu.php';
 	?>
-	<nav class="navbar navbar-expand-lg navbar-light py-lg-4 menu-escola">
-		<div class="container">
-			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">EEWBS</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav mx-auto">
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="index.php">HOME</a>
-					</li>
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="institucional.php">INSTITUCIONAL</a>
-					</li>
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="profissional.php">EDUCAÇÃO PROFISSIONAL</a>
-					</li>
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="equipe.php">EQUIPE WBS</a>
-					</li>
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="noticias.php">NOTÍCIAS</a>
-					</li>
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded active" href="contato.php">CONTATO</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav> <!--MenuEscola-->
 	<div id="conteudo" class="background-white">
 		<div class="container">
 			<h6 class="navegacao">Você está em: Contato</h6>
 			<div class="row border-gray">
 				<h1 class="div-label div-label-margin">Canais de Atendimento</h1>
 				<div class="col-md-12">
-					<iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14943.947980691068!2d-54.5814073649684!3d-20.547712999999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf42a2e93ffb9144b!2sEscola+Estadual+Waldemir+Barros+da+Silva!5e0!3m2!1spt-BR!2sus!4v1509966968771" frameborder="0" allowfullscreen></iframe>
+					<iframe id="mapa" src="<?=$instituicao->getMapa()?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="col-md-12">
 					<?php

@@ -97,12 +97,14 @@
 			$instituicao = new Instituicao();
 
 			$instituicao->setData($row['data_alteracao']);
-			$instituicao->setData($row['nome']);
-			$instituicao->setData($row['logo_principal']);
-			$instituicao->setData($row['logo_secundaria']);
-			$instituicao->setData($row['slogan']);
-			$instituicao->setVisao($row['missao']);
-			$instituicao->setMissao($row['visao']);
+			$instituicao->setNome($row['nome_escola']);
+			$instituicao->setSigla($row['sigla']);
+			$instituicao->setSlogan($row['slogan']);
+			$instituicao->setLogoPrincipal($row['logo_principal']);
+			$instituicao->setLogoSecundaria($row['logo_secundaria']);
+			$instituicao->setFavicon($row['favicon']);
+			$instituicao->setMissao($row['missao']);
+			$instituicao->setVisao($row['visao']);
 			$instituicao->setValores($row['valores']);
 			$instituicao->setHistorico($row['historico']);
 			$instituicao->setEndereco($row['endereco']);
@@ -112,7 +114,11 @@
 			$instituicao->setEmail($row['email']);
 			$instituicao->setFacebook($row['facebook']);
 			$instituicao->setYoutube($row['youtube']);
+			$instituicao->setMapa($row['mapa']);
+			$instituicao->setTemProfissional($row['tem_profissional']);
+		
 			return $instituicao;
 		}
 	}
 ?>
+
