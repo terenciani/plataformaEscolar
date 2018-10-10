@@ -78,7 +78,7 @@
                     <td><?=$banner->getData()?></td>
                     <td><img src="imagens/banners/<?=$banner->getImagem()?>" width="100"></td>
                     <td>
-                      <a href="banner_editar.php?id=<?=$banner->getId_banner()?>" title='Editar'>
+                      <a href="#" title='Editar' id="editar">
                         <i class="fas fa-pencil-alt"></i>
                       </a>
                       <a href="banner.php?metodo=DELETE&id=<?=$banner->getId_banner()?>" id='link-delete' title='Deletar'>
@@ -129,7 +129,7 @@
 </footer>
   </div>
   <!-- Modal -->
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="form-modal">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">

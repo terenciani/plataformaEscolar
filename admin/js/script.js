@@ -60,5 +60,11 @@ $(function(){
 		$('#objetivo').removeAttr('disabled');
 		$('#historia').removeAttr('disabled');
 		$('#telefone').removeAttr('disabled');
+		$('#email').removeAttr('disabled');
+	});
+
+	$('#editar').on('click', function(){
+		$('#titulo_banner').val("Marcelo")
+		$('#form-modal').modal('show');
 	});
 });
