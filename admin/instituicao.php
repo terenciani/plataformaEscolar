@@ -51,52 +51,62 @@
             </div>
             <div class="col-6">
               <div class="form-group">
-<<<<<<< HEAD
-              <label for="nome">Nome da Escola</label>
-              <textarea class="form-control" id="nome" name="nome" class="editavel" rows="4" disabled="disabled"><?=$escola->getNome()?></textarea>
-=======
                 <input type="file" name="file" class="form-control btn-arquivo" >
               </div>
             </div>
-   
-   
-           <div class="col-6">
-            <div class="form-group">
-              <label for="missao">Nome da Escola</label>
-              <textarea class="form-control" id="nome" name="nome" class="editavel" rows="2" disabled="disabled"><?=$escola->getNome()?></textarea>
-              </div>
->>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
-            </div>
-            <div class="col-6"> 
+
+            <div class="col-3">
               <div class="form-group">
-<<<<<<< HEAD
-              <label for="sigla">Sigla da Escola</label>
-              <textarea class="form-control" id="sigla" name="sigla" class="editavel" rows="4" disabled="disabled"><?=$escola->getSigla()?></textarea>
-=======
-                <label for="missao">Sigla da Escola</label>
-                <textarea class="form-control" id="sigla" name="sigla" class="editavel" rows="2" disabled="disabled"><?=$escola->getSigla()?></textarea>
+                <label for="nome">Nome da Escola</label>
+                <input type="text" id="nome" name="nome" class="form-control editavel" disabled="disabled" value="<?=$escola->getNome()?>">
               </div>
->>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
             </div>
-            <div class="col-12"> 
+
+            <div class="col-3"> 
               <div class="form-group">
-<<<<<<< HEAD
-              <label for="data">Data</label>
-              <textarea class="form-control" id="data" name="data" class="editavel" rows="2" disabled="disabled"><?=$escola->getData()?></textarea>
-=======
-                <label for="missao">Data</label>
-                <textarea class="form-control" id="data" name="data" class="editavel" rows="4" disabled="disabled"><?=$escola->getData()?></textarea>
+                <label for="sigla">Sigla da Escola</label>
+                <input type="text" id="sigla" name="sigla" class="form-control editavel" disabled="disabled" value="<?=$escola->getSigla()?>">
               </div>
->>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
             </div>
+            <div class="col-3"> 
+              <div class="form-group">
+                <label for="data">Data</label>
+                 <input type="date" id="data" name="data" class="form-control editavel" disabled="disabled" value="<?=$escola->getData()?>">
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="form-group">
+                <label for="telefone">Número de Telefone</label>
+                <input type="telefone" id="telefone" name="telefone" class="form-control editavel" disabled="disabled" value="<?=$escola->getTelefone()?>">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="endereco" id="endereco" name="endereco" class="form-control editavel" disabled="disabled" value="<?=$escola->getEndereco()?>">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="desinatarios-de-contato">Desinatarios de Contatos </label>
+                <input type="desinatarios-de-contato" id="desinatarios-de-contato" name="desinatarios-de-contato" class="form-control editavel" disabled="disabled" value="<?=$escola->getDestinatariosDeContato()?>">
+              </div>
+            </div>
+            <div class="col-3">
+              <label for="mapa">Mapa da Escola</label>
+               <input type="mapa" id="mapa" name="mapa" class="form-control editavel" disabled="disabled" value="<?=$escola->getMapa()?>">
+             </div>
+               <div class="col-3">
+              <label for="favicon">Favicon</label>
+               <input type="favicon" id="favicon" name="favicon" class="form-control editavel" disabled="disabled" value="<?=$escola->getFavicon()?>">
+             </div>
             <div class="col-12"> 
               <div class="form-group">
                 <label for="missao">Missão da Escola</label>
                 <textarea class="form-control" id="missao" name="missao" class="editavel" rows="4" disabled="disabled"><?=$escola->getMissao()?></textarea>
               </div>
             </div>
-<<<<<<< HEAD
-
             <div class="form-group">
               <label for="visao">Visão</label>
               <textarea class="form-control" id="visao" name="visao" class="editavel" disabled="disabled"><?=$escola->getVisao()?></textarea>
@@ -108,57 +118,10 @@
               disabled="disabled" name="valores"><?=$escola->getValores()?></textarea>
             </div>
              <div class="form-group">
-              <label for="endereco">Endereço</label>
-              <textarea class="form-control" id="endereco"
-              disabled="disabled" name="endereco"><?=$escola->getEndereco()?></textarea>
-=======
-            <div class="col-12"> 
-              <div class="form-group">
-                <label for="objetivo">Visão</label>
-                <textarea class="form-control" id="visao" name="visao" class="editavel" disabled="disabled"><?=$escola->getVisao()?></textarea>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <div class="form-group">
-                <label for="historia">Conheça Nossa História</label>
-                <textarea class="form-control" id="valores"
-                disabled="disabled" name="valores"><?=$escola->getValores()?></textarea>
-              </div>
-            </div>
-            <div class="col-12"> 
-               <div class="form-group">
-                <label for="historia">Histórico</label>
-                <textarea class="form-control" id="historico"
-                disabled="disabled" name="historico"><?=$escola->getHistorico()?></textarea>
-              </div>
-            </div>
-            <div class="col-12"> 
-               <div class="form-group">
-                <label for="historia">Endereço</label>
-                <textarea class="form-control" id="endereco"
-                disabled="disabled" name="endereco"><?=$escola->getEnderecoE()?></textarea>
-              </div>
->>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
-            </div>
-
-            <div class="form-group">
-              <label for="telefone">Número de Telefone</label>
-              <textarea class="form-control" id="telefone" rows="1"
-              disabled="disabled" name="telefone"> <?=$escola->getTelefone()?></textarea>
-            </div>
-
-             <div class="form-group">
               <label for="telefone-alternativo">Telefone Alternativo</label>
               <textarea class="form-control" id="telefone-alternativo"
               disabled="disabled" name="telefone-alternativo"><?=$escola->getTelefoneAlternativo()?></textarea>
             </div>
-
-             <div class="form-group">
-              <label for="desinatarios-de-contato">Desinatarios de Contatos </label>
-              <textarea class="form-control" id="desinatarios-de-contato"
-              disabled="disabled" name="desinatarios-de-contato"><?=$escola->getDestinatariosDeContato()?></textarea>
-            </div>
-
             <div class="form-group">
               <label for="email">Email</label>
               <input class="form-control" id="email" name="email" 
@@ -169,31 +132,15 @@
               <textarea class="form-control" id="historico" name="historico" class="editavel" rows="4" disabled="disabled"><?=$escola->getHistorico()?></textarea>
             </div>
               <div class="form-group">
-              <label for="en">Endereço da Escola</label>
-              <textarea class="form-control" id="endereco" name="endereco" class="editavel" rows="4" disabled="disabled"><?=$escola->getEndereco()?></textarea>
-            </div>
-              <div class="form-group">
-              <label for="missao">Email da Escola</label>
-              <textarea class="form-control" id="email" name="email" class="editavel" rows="4" disabled="disabled"><?=$escola->getEmail()?></textarea>
-            </div>
-              <div class="form-group">
               <label for="facebook">Facebook da Escola</label>
               <textarea class="form-control" id="facebook" name="facebook" class="editavel" rows="4" disabled="disabled"><?=$escola->getFacebook()?></textarea>
             </div>
               <div class="form-group">
-              <label for="missao">Endereço da Escola</label>
+              <label for="youtube">Youtube</label>
               <textarea class="form-control" id="youtube" name="youtube" class="editavel" rows="4" disabled="disabled"><?=$escola->getYoutube()?></textarea>
             </div>
             <div class="form-group">
-              <label for="missao">Endereço da Escola</label>
-              <textarea class="form-control" id="favicon" name="favicon" class="editavel" rows="4" disabled="disabled"><?=$escola->getFavicon()?></textarea>
-            </div>
-            <div class="form-group">
-              <label for="missao">Endereço da Escola</label>
-              <textarea class="form-control" id="mapa" name="mapa" class="editavel" rows="4" disabled="disabled"><?=$escola->getMapa()?></textarea>
-            </div>
-            <div class="form-group">
-              <label for="missao">Endereço da Escola</label>
+              <label for="temprofissional">Tem Profissional</label>
               <textarea class="form-control" id="temprofissional" name="temprofissional" class="editavel" rows="4" disabled="disabled"><?=$escola->getTemProfissional()?></textarea>
             </div>
             <button type="submit" name="btn-enviar" value="atualizar">Salvar Informações</button> 
