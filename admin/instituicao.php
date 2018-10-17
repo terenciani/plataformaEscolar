@@ -82,7 +82,7 @@
               <div class="form-group">
 <<<<<<< HEAD
               <label for="data">Data</label>
-              <textarea class="form-control" id="data" name="data" class="editavel" rows="4" disabled="disabled"><?=$escola->getData()?></textarea>
+              <textarea class="form-control" id="data" name="data" class="editavel" rows="2" disabled="disabled"><?=$escola->getData()?></textarea>
 =======
                 <label for="missao">Data</label>
                 <textarea class="form-control" id="data" name="data" class="editavel" rows="4" disabled="disabled"><?=$escola->getData()?></textarea>
