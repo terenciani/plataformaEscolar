@@ -74,7 +74,7 @@
 				<div class="col-md-6">
 					<div class="card cartao-equipe">
 						<div class="card-body">
-						    <a href="#pedagogica" id="link-pedagogico">
+						    <a href="pedagogica.php" id="link-pedagogico">
 						    	Equipe Pedagógica <i class="fa fa-plus-circle fa-4 pull-right" aria-hidden="true"></i>
 						    </a>
 					  	</div>
