@@ -1,4 +1,8 @@
-/*Google Fonts*/
+  <?php
+    include_once("includes/head.php");
+  ?>
+<style type="text/css">
+	/*Google Fonts*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i");
 /*Modify Chart Colors Hack*/
 .chart, .easypiechart {
@@ -812,3 +816,104 @@ table, td, tr, th, thead {
   background: #f7f7f7; }
   .error-page h1 {
     font-size: 4rem; }
+</style>
+<body>
+	<div class="container-fluid" id="wrapper">
+		<div class="row">
+			<main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
+				<section class="row">
+					<div class="col-sm-12">
+						<section class="row">
+							<div class="col-md-12 col-lg-8">
+								<div class="jumbotron">
+									<h1 class="mb-4">Hello, world!</h1>
+									<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+									<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+									<p class="lead"><a class="btn btn-primary btn-lg mt-2" href="#" role="button">Learn more</a></p>
+								</div>
+							</div>
+							<div class="col-md-12 col-lg-4">
+								<div class="card mb-4">
+									<div class="card-block">
+										<div id="calendar"></div>
+										<div class="divider"></div>
+										<h3 class="card-title">Timeline</h3>
+										<h6 class="card-subtitle mb-2 text-muted">What's coming up</h6>
+										<ul class="timeline">
+											<li>
+												<div class="timeline-badge"><em class="fa fa-camera"></em></div>
+												<div class="timeline-panel">
+													<div class="timeline-heading">
+														<h5 class="timeline-title mt-2">Lorem ipsum</h5>
+													</div>
+													<div class="timeline-body">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-badge primary"><em class="fa fa-link"></em></div>
+												<div class="timeline-panel">
+													<div class="timeline-heading">
+														<h5 class="timeline-title mt-2">Dolor</h5>
+													</div>
+													<div class="timeline-body">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-badge"><em class="fa fa-paperclip"></em></div>
+												<div class="timeline-panel">
+													<div class="timeline-heading">
+														<h5 class="timeline-title mt-2">Sit amet</h5>
+													</div>
+													<div class="timeline-body">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+	<?php
+      include_once("includes/modal-sair.php");
+      include_once("includes/footer.php");
+    ?>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    
+    <script src="js/chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/easypiechart-data.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+	    var startCharts = function () {
+	                var chart1 = document.getElementById("line-chart").getContext("2d");
+	                window.myLine = new Chart(chart1).Line(lineChartData, {
+	                responsive: true,
+	                scaleLineColor: "rgba(0,0,0,.2)",
+	                scaleGridLineColor: "rgba(0,0,0,.05)",
+	                scaleFontColor: "#c5c7cc "
+	                });
+	            }; 
+	        window.setTimeout(startCharts(), 1000);
+	</script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="components/jquery/jquery-3.2.1.min.js"></script>
+  <script src="components/bootstrap-4.0.1/js/bootstrap.min.js"></script>
+	</body>

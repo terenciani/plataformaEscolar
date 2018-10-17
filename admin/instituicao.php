@@ -41,32 +41,61 @@
           <button disable name="alterar" type="submit" class="btn btn-lg btn-success pull-right" id="btn-habilitar">Editar Dados        </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <form method="POST">
-            <div class="form-group">
-              <input type="file" name="file" class="form-control btn-arquivo" >
-            </div>
-
+      <div class="container">
+        <div class="row">
+          <form method="POST" class="row">
+            <div class="col-6">
               <div class="form-group">
+                <input type="file" name="file" class="form-control btn-arquivo" >
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+<<<<<<< HEAD
               <label for="nome">Nome da Escola</label>
               <textarea class="form-control" id="nome" name="nome" class="editavel" rows="4" disabled="disabled"><?=$escola->getNome()?></textarea>
+=======
+                <input type="file" name="file" class="form-control btn-arquivo" >
+              </div>
             </div>
-
+   
+   
+           <div class="col-6">
+            <div class="form-group">
+              <label for="missao">Nome da Escola</label>
+              <textarea class="form-control" id="nome" name="nome" class="editavel" rows="2" disabled="disabled"><?=$escola->getNome()?></textarea>
+              </div>
+>>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
+            </div>
+            <div class="col-6"> 
               <div class="form-group">
+<<<<<<< HEAD
               <label for="sigla">Sigla da Escola</label>
               <textarea class="form-control" id="sigla" name="sigla" class="editavel" rows="4" disabled="disabled"><?=$escola->getSigla()?></textarea>
+=======
+                <label for="missao">Sigla da Escola</label>
+                <textarea class="form-control" id="sigla" name="sigla" class="editavel" rows="2" disabled="disabled"><?=$escola->getSigla()?></textarea>
+              </div>
+>>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
             </div>
-
+            <div class="col-12"> 
               <div class="form-group">
+<<<<<<< HEAD
               <label for="data">Data</label>
               <textarea class="form-control" id="data" name="data" class="editavel" rows="4" disabled="disabled"><?=$escola->getData()?></textarea>
+=======
+                <label for="missao">Data</label>
+                <textarea class="form-control" id="data" name="data" class="editavel" rows="4" disabled="disabled"><?=$escola->getData()?></textarea>
+              </div>
+>>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
             </div>
-
-            <div class="form-group">
-              <label for="missao">Missão da Escola</label>
-              <textarea class="form-control" id="missao" name="missao" class="editavel" rows="4" disabled="disabled"><?=$escola->getMissao()?></textarea>
+            <div class="col-12"> 
+              <div class="form-group">
+                <label for="missao">Missão da Escola</label>
+                <textarea class="form-control" id="missao" name="missao" class="editavel" rows="4" disabled="disabled"><?=$escola->getMissao()?></textarea>
+              </div>
             </div>
+<<<<<<< HEAD
 
             <div class="form-group">
               <label for="visao">Visão</label>
@@ -82,6 +111,34 @@
               <label for="endereco">Endereço</label>
               <textarea class="form-control" id="endereco"
               disabled="disabled" name="endereco"><?=$escola->getEndereco()?></textarea>
+=======
+            <div class="col-12"> 
+              <div class="form-group">
+                <label for="objetivo">Visão</label>
+                <textarea class="form-control" id="visao" name="visao" class="editavel" disabled="disabled"><?=$escola->getVisao()?></textarea>
+              </div>
+            </div>
+            <div class="col-12"> 
+              <div class="form-group">
+                <label for="historia">Conheça Nossa História</label>
+                <textarea class="form-control" id="valores"
+                disabled="disabled" name="valores"><?=$escola->getValores()?></textarea>
+              </div>
+            </div>
+            <div class="col-12"> 
+               <div class="form-group">
+                <label for="historia">Histórico</label>
+                <textarea class="form-control" id="historico"
+                disabled="disabled" name="historico"><?=$escola->getHistorico()?></textarea>
+              </div>
+            </div>
+            <div class="col-12"> 
+               <div class="form-group">
+                <label for="historia">Endereço</label>
+                <textarea class="form-control" id="endereco"
+                disabled="disabled" name="endereco"><?=$escola->getEnderecoE()?></textarea>
+              </div>
+>>>>>>> 8c6f5e656107cdb58870bfeb50525784d9396c95
             </div>
 
             <div class="form-group">
