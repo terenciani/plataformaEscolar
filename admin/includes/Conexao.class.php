@@ -26,6 +26,7 @@
 	        }
 	        catch (PDOException $e)
 	        {
+	        	print($e->getMessage());
 	            # Envia um e-mail para o e-mail oficial do sistema, em caso de erro de conexão.
 	            mail($sistema_email, "PDOException em $sistema_titulo", $e->getMessage());
 	            # Então não carrega nada mais da página.

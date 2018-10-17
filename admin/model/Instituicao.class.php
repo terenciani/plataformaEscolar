@@ -1,8 +1,12 @@
 <?php
   class Instituicao {
-		private $data;
-		private $visao;
+
+    private $data;
+    private $nome;
+    private $sigla;
+    private $slogan;
 		private $missao;
+		private $visao;
     private $valores;
     private $historico;
     private $endereco;
@@ -12,15 +16,45 @@
     private $email;
     private $youtube;
     private $facebook;
+    private $logoPrincipal;
+    private $logoSecundaria;
+    private $favicon;
+    private $mapa;
+    private $temProfissional;
 
-		public function getData() {
+
+    public function getData() {
       $timestamp = strtotime($this->data); 
       return date('d/m/Y', $timestamp); 
-  	}
+    }
 
-  	public function setData($data) {
-    	$this->data = $data;
-  	}
+    public function setData($data) {
+      $this->data = $data;
+    }
+
+    public function getNome() {
+      return $this->nome; 
+    }
+
+    public function setNome($nome) {
+      $this->nome = $nome;
+    }
+
+    public function getSigla() {
+      return $this->sigla; 
+    }
+
+    public function setSigla($sigla) {
+      $this->sigla = $sigla;
+    }
+
+    public function getSlogan() {
+      return $this->slogan; 
+    }
+
+    public function setSlogan($slogan) {
+      $this->slogan = $slogan;
+    }
 
   	public function getVisao() {
       return $this->visao;
@@ -91,6 +125,7 @@
     public function setEmail($email) {
       $this->email = $email;
     }
+
     public function getFacebook() {
       return  $this->facebook;
     }
@@ -98,12 +133,53 @@
     public function setFacebook($facebook) {
       $this->facebook = $facebook;
     }
+
+    public function getLogoPrincipal() {
+      return  $this->logoPrincipal;
+    }
+
+    public function setLogoPrincipal($logoPrincipal) {
+      $this->logoPrincipal = $logoPrincipal;
+    }
+
+    public function getLogoSecundaria() {
+      return  $this->logoSecundaria;
+    }
+
+    public function setLogoSecundaria($logoSecundaria) {
+      $this->logoSecundaria = $logoSecundaria;
+    }
+
+    public function getFavicon() {
+      return  $this->favicon;
+    }
+
+    public function setFavicon($favicon) {
+      $this->favicon = $favicon;
+    }
+
     public function getYoutube() {
       return  $this->youtube;
     }
 
     public function setYoutube($youtube) {
       $this->youtube = $youtube;
+    }
+    
+    public function getMapa() {
+      return  $this->mapa;
+    }
+
+    public function setMapa($mapa) {
+      $this->mapa = $mapa;
+    } 
+
+    public function getTemProfissional() {
+      return  $this->temProfissional;
+    }
+
+    public function setTemProfissional($temProfissional) {
+      $this->temProfissional = $temProfissional;
     } 
 	}
 ?>

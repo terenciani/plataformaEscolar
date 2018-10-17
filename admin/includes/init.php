@@ -12,4 +12,6 @@
 	define('LIB_MODEL',SITE_ROOT_ADMIN.DS.'model');
 	define('LIB_INCLUDES',SITE_ROOT_ADMIN.DS.'includes');	
 	define('LIB_IMG_NOTICIAS',SITE_ROOT_ADMIN.DS.'imagens'.DS.'noticias');
+	define('LIB_IMG_BANNERS',SITE_ROOT_ADMIN.DS.'imagens'.DS.'banners');
+	define('LIB_IMG_MENU',SITE_ROOT_ADMIN.DS.'imagens'.DS.'menu');
 ?>
