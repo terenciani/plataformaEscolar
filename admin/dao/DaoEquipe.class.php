@@ -56,7 +56,21 @@
 				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
 			}
 		}
-		
+		public function buscarTodosDaEquipe() {
+			try {
+				$sql = "SELECT * FROM tb_servidor ORDER BY nome";
+				$result = Conexao::getInstancia()->query($sql);
+				$lista = $result->fetchAll(PDO::FETCH_ASSOC);
+				$f_lista = array();
+
+				foreach ($lista as $l)
+					$f_lista[] = $this->populaServidor($l);
+
+				return $f_lista;
+			} catch (Exception $e) {
+				print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+			}
+		}
 		private function populaServidor($row) {
 			$servidor = new Servidor();
 			$servidor->setId_servidor($row['id_servidor']);
