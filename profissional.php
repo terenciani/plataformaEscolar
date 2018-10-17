@@ -21,28 +21,23 @@
 
 	<div id="Page-Pro">
 					
-		<h2>O que é educação profissional</h2>
 		<div class="c-t">
-			<p>A Educação Profissional é uma Modalidade de Ensino encontrada na Educação Básica, sua oferta se dá através de Cursos Técnicos, de Formação Inicial e Continuada.</p>
+		<h2><b>Educação profissional</b></h2>
+			<p>Empreendedorismo<br> 
+			   Linguagem lógica de programação<br>
+			   Introdução de informática<br>
+			   Linguagem para internet</p>
 		</div>
 
-		<h2>Como funciona</h2>
 		<div class="c-t">
+		<h2><b>Como funciona</b></h2>
 			<p>Educação Profissional é uma Modalidade de Ensino encontrada na Educação Básica, sua ofertase dá através de Cursos Técnicos, de Formação Inicial e Continuada</p>
 		</div>
 
-		<h2>Histórico</h2>
-		<div class="c-t">
-			<p>
-				
-			</p>
-		</div>
-
 		<div id="imagens">
-
-			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
-			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
-			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+			<img src="http://i65.tinypic.com/2z50k88.jpg">
+			<img src="http://i63.tinypic.com/1037o7c.jpg">
+			<img src="http://i68.tinypic.com/2rrm3xs.jpg">
 			<br/>
 			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
 			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
