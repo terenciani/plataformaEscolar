@@ -93,14 +93,26 @@
                 <input type="desinatarios-de-contato" id="desinatarios-de-contato" name="desinatarios-de-contato" class="form-control editavel" disabled="disabled" value="<?=$escola->getDestinatariosDeContato()?>">
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-6">
               <label for="mapa">Mapa da Escola</label>
                <input type="mapa" id="mapa" name="mapa" class="form-control editavel" disabled="disabled" value="<?=$escola->getMapa()?>">
              </div>
-               <div class="col-3">
+               <div class="col-6">
               <label for="favicon">Favicon</label>
                <input type="favicon" id="favicon" name="favicon" class="form-control editavel" disabled="disabled" value="<?=$escola->getFavicon()?>">
              </div>
+             <div class="form-group">
+              <div class="col-12">
+              <label for="youtube">Youtube</label>
+              <input type="youtube" id="youtube" name="youtube" class="form-control editavel" disabled="disabled" value="<?=$escola->getYoutube()?>">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="col-12">
+              <label for="facebook">Facebook da Escola</label>
+              <input type="facebook" id="facebook" name="facebook" class="form-control editavel" disabled="disabled" value="<?=$escola->getFacebook()?>">
+            </div>
+            </div>
             <div class="col-12"> 
               <div class="form-group">
                 <label for="missao">Missão da Escola</label>
@@ -130,15 +142,7 @@
               <div class="form-group">
               <label for="historico">Histórico da Escola</label>
               <textarea class="form-control" id="historico" name="historico" class="editavel" rows="4" disabled="disabled"><?=$escola->getHistorico()?></textarea>
-            </div>
-              <div class="form-group">
-              <label for="facebook">Facebook da Escola</label>
-              <textarea class="form-control" id="facebook" name="facebook" class="editavel" rows="4" disabled="disabled"><?=$escola->getFacebook()?></textarea>
-            </div>
-              <div class="form-group">
-              <label for="youtube">Youtube</label>
-              <textarea class="form-control" id="youtube" name="youtube" class="editavel" rows="4" disabled="disabled"><?=$escola->getYoutube()?></textarea>
-            </div>
+                </div>
             <div class="form-group">
               <label for="temprofissional">Tem Profissional</label>
               <textarea class="form-control" id="temprofissional" name="temprofissional" class="editavel" rows="4" disabled="disabled"><?=$escola->getTemProfissional()?></textarea>
