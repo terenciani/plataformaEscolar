@@ -27,6 +27,7 @@
 
 		public function alterarDadosDaInstituicaoNoBanco($dadosDoFormulario){
 			try{
+				
 				$sql = "INSERT INTO `tb_instituicao`(
 							`data_alteracao`, 
 							`nome_escola`, 

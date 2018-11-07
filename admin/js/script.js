@@ -57,10 +57,24 @@ $(function(){
 $(function(){
 	$('#btn-habilitar').on('click', function(){
 		$('#missao').removeAttr('disabled');
+		$('#nome').removeAttr('disabled');
 		$('#objetivo').removeAttr('disabled');
 		$('#historia').removeAttr('disabled');
 		$('#telefone').removeAttr('disabled');
 		$('#email').removeAttr('disabled');
+		$('#valores').removeAttr('disabled');
+		$('#desinatarios-de-contato').removeAttr('disabled');
+		$('#endereco').removeAttr('disabled');
+		$('#sigla').removeAttr('disabled');
+		$('#data').removeAttr('disabled');
+		$('#mapa').removeAttr('disabled');
+		$('#youtube').removeAttr('disabled');
+		$('#facebook').removeAttr('disabled');	
+		$('#visao').removeAttr('disabled');
+		$('#telefone-alternativo').removeAttr('disabled');
+		$('#temprofissional').removeAttr('disabled');
+		$('#historico').removeAttr('disabled');
+		
 	});
 
 	$('#editar').on('click', function(){
