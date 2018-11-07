@@ -201,13 +201,7 @@
       </div>
     </div>
   </div>
-</div><footer class="sticky-footer">
-  <div class="container">
-    <div class="text-center">
-      <small>Copyright © EEWBS 2018</small>
-    </div>
-  </div>
-</footer>
+</div>
   </div>
   <!-- Modal -->
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

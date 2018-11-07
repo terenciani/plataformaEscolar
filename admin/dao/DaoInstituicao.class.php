@@ -43,7 +43,10 @@
 							`destinatario_contato`, 
 							`email`, 
 							`facebook`, 
-							`youtube`) 
+							`youtube` 
+							'favicon',
+							'mapa',
+							'temProfissional')
 						VALUES (
 							:data,
 							:nome,
@@ -61,6 +64,9 @@
 							:email,
 							:facebook,
 							:youtube,
+							:favicon,
+							:mapa,
+							:temProfissional
 							)";
 
 				$p_sql = Conexao::getInstancia()->prepare($sql);
@@ -75,11 +81,14 @@
 				$p_sql->bindValue(":historico", $dadosDoFormulario['historico']);
 				$p_sql->bindValue(":endereco", $dadosDoFormulario['endereco']);
 				$p_sql->bindValue(":telefone", $dadosDoFormulario['telefone']);
-				$p_sql->bindValue(":telefoneAlternativo", $dadosDoFormulario['telefoneAlternativo']);
-				$p_sql->bindValue(":destinatarioContato", $dadosDoFormulario['destinatarioContato']);
+				$p_sql->bindValue(":telefoneAlternativo", $dadosDoFormulario['telefone-alternativo']);
+				$p_sql->bindValue(":destinatarioContato", $dadosDoFormulario['desinatarios-de-contato']);
 				$p_sql->bindValue(":email", $dadosDoFormulario['email']);
 				$p_sql->bindValue(":facebook", $dadosDoFormulario['facebook']);
 				$p_sql->bindValue(":youtube", $dadosDoFormulario['youtube']);
+				$p_sql->bindValue(":favicon", $dadosDoFormulario['favicon']);
+				$p_sql->bindValue(":mapa", $dadosDoFormulario['mapa']);
+				$p_sql->bindValue(":temProfissional", $dadosDoFormulario['temProfissional']);
 
 	          	$p_sql->execute();
 
@@ -97,12 +106,14 @@
 			$instituicao = new Instituicao();
 
 			$instituicao->setData($row['data_alteracao']);
-			$instituicao->setData($row['nome']);
-			$instituicao->setData($row['logo_principal']);
-			$instituicao->setData($row['logo_secundaria']);
-			$instituicao->setData($row['slogan']);
-			$instituicao->setVisao($row['missao']);
-			$instituicao->setMissao($row['visao']);
+			$instituicao->setNome($row['nome_escola']);
+			$instituicao->setSigla($row['sigla']);
+			$instituicao->setSlogan($row['slogan']);
+			$instituicao->setLogoPrincipal($row['logo_principal']);
+			$instituicao->setLogoSecundaria($row['logo_secundaria']);
+			$instituicao->setFavicon($row['favicon']);
+			$instituicao->setMissao($row['missao']);
+			$instituicao->setVisao($row['visao']);
 			$instituicao->setValores($row['valores']);
 			$instituicao->setHistorico($row['historico']);
 			$instituicao->setEndereco($row['endereco']);
@@ -112,7 +123,10 @@
 			$instituicao->setEmail($row['email']);
 			$instituicao->setFacebook($row['facebook']);
 			$instituicao->setYoutube($row['youtube']);
+			$instituicao->setMapa($row['mapa']);
+			$instituicao->setTemProfissional($row['tem_profissional']);
 			return $instituicao;
 		}
 	}
 ?>
+

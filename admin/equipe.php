@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+<html lang="pt-br"><head>
+=======
+ <?php
+  require_once 'includes/init.php';
+  include_once LIB_CONTROLLER.DS.'EquipeController.class.php';
+
+  $controle  = new EquipeController();
+  
+  if(isset($_POST['metodo'])){
+    $msg = $controle->salvarEquipe($_POST, $_FILES);
+  }
+ ?>
  <html lang="pt-br"><head>
+>>>>>>> b48cd21162ad20a2c27702e1723d0e54b521c96c
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,7 +65,11 @@
             <span class="nav-link-text"> Gerência da Escola </span>
           </a>
 
-           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+<<<<<<< HEAD
+           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Equipe">
+=======
+           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Equipe WBS">
+>>>>>>> b48cd21162ad20a2c27702e1723d0e54b521c96c
           <a class="nav-link" href="equipe.php">
           <i class="fas fa-users-cog"></i>
             <span class="nav-link-text">Gerência de Equipe</span>
@@ -78,7 +96,7 @@
         <li class="breadcrumb-item">
           <a href="index.html">Início</a>
         </li>
-        <li class="breadcrumb-item active">Noticia</li>
+        <li class="breadcrumb-item active">Equipe</li>
       </ol>
      
         
@@ -91,41 +109,34 @@
           <table class="table table-hover">
             <thead class="thead-dark">
               <tr>
-                <th scope="col">Formulário da Equipe</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Função</th>
+                <th scope="col">Foto</th>
                 <th scope="col">Config</th>
               </tr>
             </thead>
             <tbody>
-                  <tr>
-                      <td><img src="imagens/equipe/avatar.png" width="100"></td>
-                      <td>Coruja</td>
-                      <td>CruCru</td>
+                <?php
+                  $listaDeServidores = $controle->buscarTodosDaEquipe();
+                  foreach ($listaDeServidores as $servidor):
+                ?>
+               <tr>
+                  <td><b><?=$servidor->getNome()?> <?=$servidor->getSobrenome()?></b></td>
+                  <td><?=$servidor->getFuncao()?> - <?=$servidor->getAtuacao()?></td>
+                  <td><img src="imagens/equipe/<?=$servidor->getImagem()?>" width="100"></td>
                       
-                      <td>
-                        <a href="noticia_editar.php?id=14" title="Editar">
-                          <i class="fas fa-pencil-alt"></i>
-                        </a>
-                        <a href="noticia.php?metodo=DELETE&amp;id=14" id="link-delete" title="Deletar">
-                          <i class="far fa-trash-alt"></i>
-                        </a>
-                      </td>
+                  <td>
+                    <a href="noticia_editar.php?id=<?=$servidor->getId_servidor()?>" title="Editar">
+                      <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="noticia.php?metodo=DELETE&amp;id=<?=$servidor->getId_servidor()?>" id="link-delete" title="Deletar">
+                      <i class="far fa-trash-alt"></i>
+                    </a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td><img src="imagens/equipe/homem.jpg" width="100"></td>
-                      <td>Aranha</td>
-                      <td>Pxiu</td>
-                      
-                      <td>
-                        <a href="noticia_editar.php?id=14" title="Editar">
-                          <i class="fas fa-pencil-alt"></i>
-                        </a>
-                        <a href="noticia.php?metodo=DELETE&amp;id=14" id="link-delete" title="Deletar">
-                          <i class="far fa-trash-alt"></i>
-                        </a>
-                      </td>
-                  </tr>
+                  <?php
+                  endforeach;
+                ?>
                </tbody>
           </table>
 
@@ -157,12 +168,6 @@
       </div>
     </div>
   </div>
-</div><footer class="sticky-footer">
-  <div class="container">
-    <div class="text-center">
-      <small>Copyright © EEWBS 2018</small>
-    </div>
-  </div>
 </footer>
   </div>
   <!-- Modal -->
@@ -178,30 +183,17 @@
         <div class="modal-body">
           <form method="POST" character_set="UTF-8" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="titulo-noticia">Título</label>
+              <label for="titulo-noticia">Nome</label>
               <input type="text" class="form-control" id="titulo_noticia" name="titulo_noticia" required="">
             </div>
             <div class="form-group">
-              <label for="chamada-noticia">Chamada</label>
+              <label for="chamada-noticia">Função</label>
               <input type="text" class="form-control" id="chamada_noticia" name="chamada_noticia" required="">
             </div>
             
             <div class="form-group">
-              <label for="btn-uptload">Imagem</label>
+              <label for="btn-uptload">Foto</label>
               <input type="file" class="form-control-file" id="btn-uptload" name="imagem">
-            </div>
-            
-            <div class="form-group">
-              <label for="data-noticia">Data da Notícia</label>
-              <input type="date" class="form-control data" id="data-noticia" name="data-noticia" required="">
-            </div>
-            <div class="form-group">
-              <label for="fonte-noticia">Fonte da Notícia</label>
-              <input type="text" class="form-control" id="fonte-noticia" name="fonte-noticia" required="">
-            </div>
-            <div class="form-group">
-              <label for="texto-noticia">Texto</label>
-              <textarea class="form-control" rows="15" id="texto-noticia" name="texto_noticia" required=""></textarea>
             </div>
             <div class="botao-grupo float-right">
               <button type="submit" class="btn btn-success botao-form" name="metodo" value="POST">Salvar</button>
@@ -221,4 +213,5 @@
 
 
 
-</body></html>  
+
+</body></html>

@@ -1,10 +1,3 @@
-<?php
-	require_once './admin/includes/init.php';
-	include_once LIB_CONTROLLER.DS.'IndexController.class.php';
-
-	$controller = new IndexController();
-	$instituicao = $controller->getInstituicao();
-?>
 <div class="menu-gov">
 	<div class="container">
 		<div class="row">
@@ -104,4 +97,37 @@
 		</div>
 	</div>
 </div><!--slogan-escola-->
-<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light py-lg-4 menu-escola">
+	<div class="container">
+		<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">
+			<?=$instituicao->getSigla()?>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase text-expanded" href="index.php">HOME</a>
+				</li>
+				<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase text-expanded" href="institucional.php">INSTITUCIONAL</a>
+				</li>
+			<?php if ($instituicao->getTemProfissional()):?>
+				<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase text-expanded" href="profissional.php">EDUCAÇÃO PROFISSIONAL</a>
+				</li>
+			<?php endif;?>
+				<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase text-expanded" href="equipe.php">EQUIPE WBS</a>
+				</li>
+				<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase text-expanded" href="noticias.php">NOTÍCIAS</a>
+				</li>
+				<li class="nav-item px-lg-4">
+					<a class="nav-link text-uppercase text-expanded" href="contato.php">CONTATO</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav> <!--MenuEscola-->

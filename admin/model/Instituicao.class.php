@@ -1,9 +1,10 @@
 <?php
   class Instituicao {
+
+    private $data;
     private $nome;
     private $sigla;
     private $slogan;
-		private $data;
 		private $missao;
 		private $visao;
     private $valores;
@@ -16,34 +17,11 @@
     private $youtube;
     private $facebook;
     private $logoPrincipal;
-    private $logoAlternativa;
+    private $logoSecundaria;
+    private $favicon;
+    private $mapa;
     private $temProfissional;
 
-		
-
-    public function getNome() {
-      return $nome; 
-    }
-
-    public function setNome($nome) {
-      $this->nome = $nome;
-    }
-
-    public function getSigla() {
-      return $sigla; 
-    }
-
-    public function setSigla($sigla) {
-      $this->sigla = $sigla;
-    }
-
-    public function getSlogan() {
-      return $slogan; 
-    }
-
-    public function setSlogan($slogan) {
-      $this->slogan = $slogan;
-    }
 
     public function getData() {
       $timestamp = strtotime($this->data); 
@@ -52,6 +30,30 @@
 
     public function setData($data) {
       $this->data = $data;
+    }
+
+    public function getNome() {
+      return $this->nome; 
+    }
+
+    public function setNome($nome) {
+      $this->nome = $nome;
+    }
+
+    public function getSigla() {
+      return $this->sigla; 
+    }
+
+    public function setSigla($sigla) {
+      $this->sigla = $sigla;
+    }
+
+    public function getSlogan() {
+      return $this->slogan; 
+    }
+
+    public function setSlogan($slogan) {
+      $this->slogan = $slogan;
     }
 
   	public function getVisao() {
@@ -140,12 +142,20 @@
       $this->logoPrincipal = $logoPrincipal;
     }
 
-    public function getLogoAlternativa() {
-      return  $this->logoAlternativa;
+    public function getLogoSecundaria() {
+      return  $this->logoSecundaria;
     }
 
-    public function setLogoAlternativa($logoAlternativa) {
-      $this->logoAlternativa = $logoAlternativa;
+    public function setLogoSecundaria($logoSecundaria) {
+      $this->logoSecundaria = $logoSecundaria;
+    }
+
+    public function getFavicon() {
+      return  $this->favicon;
+    }
+
+    public function setFavicon($favicon) {
+      $this->favicon = $favicon;
     }
 
     public function getYoutube() {
@@ -154,6 +164,14 @@
 
     public function setYoutube($youtube) {
       $this->youtube = $youtube;
+    }
+    
+    public function getMapa() {
+      return  $this->mapa;
+    }
+
+    public function setMapa($mapa) {
+      $this->mapa = $mapa;
     } 
 
     public function getTemProfissional() {
