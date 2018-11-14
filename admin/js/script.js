@@ -72,9 +72,12 @@ $(function(){
 		$('#facebook').removeAttr('disabled');	
 		$('#visao').removeAttr('disabled');
 		$('#telefone-alternativo').removeAttr('disabled');
-		$('#temprofissional').removeAttr('disabled');
+		$('#tem-profissional').removeAttr('disabled');
+		$('#favicon').removeAttr('disabled');
 		$('#historico').removeAttr('disabled');
-		
+		$('#logo-principal').removeAttr('disabled');
+		$('#logo-secundaria').removeAttr('disabled');
+		$('#slogan').removeAttr('disabled');
 	});
 
 	$('#editar').on('click', function(){

@@ -8,8 +8,8 @@
     
 
     if(isset($_POST['btn-enviar'])){
-      var_dump($_POST);
-      $controle->alterarDadosDaInstituicao($_POST);
+      var_dump($_FILES);
+      $controle->alterarDadosDaInstituicao($_POST, $_FILES);
     }
       
     //break;
@@ -47,12 +47,14 @@
           <form method="POST" class="row" character_set="UTF-8" enctype="multipart/form-data">
             <div class="col-6">
               <div class="form-group">
-                <input type="file" name="logo1" class="form-control btn-arquivo" >
+                <label for="logo-principal">Logo Principal</label>
+                <input type="file" name="logo-principal" id="logo-principal" class="form-control btn-arquivo" disabled>
               </div>
             </div>
             <div class="col-6">
               <div class="form-group">
-                <input type="file" name="logo2" class="form-control btn-arquivo" >
+                <label for="logo-secundaria">Logo Secundária</label>
+                <input type="file" name="logo-secundaria" id="logo-secundaria" class="form-control btn-arquivo" disabled>
               </div>
             </div>
 
@@ -82,6 +84,12 @@
                 <input type="telefone" id="telefone" name="telefone" class="form-control editavel" disabled="disabled" value="<?=$escola->getTelefone()?>">
               </div>
             </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label for="slogan">Slogan</label>
+                <input type="slogan" id="slogan" name="slogan" class="form-control editavel" disabled="disabled" value="<?=$escola->getSlogan()?>">
+              </div>
+            </div>
             <div class="col-6">
               <div class="form-group">
                 <label for="endereco">Endereço</label>
@@ -103,7 +111,7 @@
             <div class="col-6">
               <div class="form-group">
                 <label for="favicon">Favicon</label>
-                <input type="favicon" id="favicon" name="favicon" class="form-control editavel" disabled="disabled" value="<?=$escola->getFavicon()?>">
+                <input type="file" id="favicon" name="favicon" class="form-control editavel" disabled="disabled" value="<?=$escola->getFavicon()?>">
               </div>
             </div>
             <div class="col-6">
@@ -138,8 +146,8 @@
             </div> 
             <div class="col-6">
               <div class="form-group">
-                <label for="temprofissional">Tem Profissional</label>
-                <input type="checkbox" id="temprofissional" name="temprofissional" class="form-control editavel" disabled="disabled" value="<?=$escola->getTemProfissional()?>">
+                <label for="tem-profissional">Tem Profissional</label>
+                <input type="checkbox" id="tem-profissional" name="tem-profissional" class="form-control editavel" disabled="disabled" value="<?=$escola->getTemProfissional()?>">
               </div>
             </div>    
             <div class="col-12"> 
