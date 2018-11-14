@@ -23,15 +23,12 @@
 					
 		<div class="c-t">
 		<h2><b>Educação profissional</b></h2>
-			<p>Empreendedorismo<br> 
-			   Linguagem lógica de programação<br>
-			   Introdução de informática<br>
-			   Linguagem para internet</p>
+			<p>Educação Profissional é uma Modalidade de Ensino encontrada na Educação Básica, sua ofertase dá através de Cursos Técnicos, de Formação Inicial e Continuada.</p>
 		</div>
 
 		<div class="c-t">
 		<h2><b>Como funciona</b></h2>
-			<p>Educação Profissional é uma Modalidade de Ensino encontrada na Educação Básica, sua ofertase dá através de Cursos Técnicos, de Formação Inicial e Continuada</p>
+		<p>Os cursos Técnicos são cursos de longa duração, podendo ter carga horária mínima de 800 horas a 3333 horas, dependendo da forma ofertada. Ao seu término o aluno recebe um Diploma que lhe confere a Habilitação Técnica cursada juntamente com o Ensino Médio ou após a conclusão do mesmo.</p>
 		</div>
 
 		<div id="imagens">
@@ -39,16 +36,17 @@
 			<img src="http://i63.tinypic.com/1037o7c.jpg">
 			<img src="http://i68.tinypic.com/2rrm3xs.jpg">
 			<br/>
-			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
-			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
-			<img src="http://www.rivertec.com.br/imagem/1158-teste-codigo-01teste-01.jpg">
+			<img src="http://i63.tinypic.com/11w8pkm.jpg">
+			<img src="http://i63.tinypic.com/2mpistt.jpg">
+			<img src="http://i63.tinypic.com/6pakwz.jpg">
 			<br/>
 
 		</div>
-
+<!--
 		<button>Ver foto</button>
 		<button>Equipe</button>
 		<button>Ver vídeos</button>
+-->
 
 	</div>
 				
@@ -56,6 +54,7 @@
 		</div>
 	</div>
 	<footer class="rodape rodape-button">
+	
 		<div class="container">
 			<h6 class="texto-rodape">www.eewbs.com.br © 2017 - Todos os direitos reservados</h6>
 		</div>

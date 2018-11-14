@@ -621,7 +621,8 @@ img.icone-galeria{
 	text-align: center;
 	border-style: solid;
 	border-width: 1.5px;
-	border-color:gray;
+	border-color: grey;
+	font color: grey;
 	margin: 14px 0px 0px 14px;   
 }
 #Page-Pro p 
@@ -640,8 +641,8 @@ img.icone-galeria{
 }
 #Page-Pro img
 {
-	width: 265px;
-	height: 250px;
+	width: 258px;
+	height: 243px;
 	background: black;
 	margin-right: 5px; 
 	margin-bottom: 7px;
