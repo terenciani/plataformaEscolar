@@ -15,7 +15,7 @@
 
 		public function getInstituicao() {
 			try {
-				$sql = "SELECT * FROM tb_instituicao  ORDER BY data_alteracao LIMIT 1";
+				$sql = "SELECT * FROM tb_instituicao  ORDER BY data_alteracao DESC LIMIT 1";
 				$result = Conexao::getInstancia()->query($sql);
 				//$instituicao = $result->fetchObject('Instituicao');
 				$row = $result->fetchAll(PDO::FETCH_ASSOC);
