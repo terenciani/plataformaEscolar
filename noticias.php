@@ -58,7 +58,7 @@
 						
 					else:
 						$noticias = $controller->buscarTodasNoticias();
-						//var_dump($bannersMural);
+						
 						foreach ($noticias as $noticia):
 				?>
 							<div class="row card-pag-noticias">

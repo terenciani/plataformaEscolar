@@ -1,7 +1,6 @@
 <?php
 
 	header("Content-Type: text/html; charset=UTF-8", true);
-	$_REQUEST = array_map(utf8_decode, $_REQUEST);
 	/**
 	* Sistema de segurança com acesso restrito
 	*
@@ -33,7 +32,7 @@
 	$_SG['servidor'] = 'www.terenciani.com.br';    				// Servidor MySQL
 	$_SG['usuario'] = 'teren671_admin';          // Usuário MySQL
 	$_SG['senha'] = '152535';                   // Senha MySQL
-	$_SG['banco'] = 'teren671_bd_escola';            // Banco de dados MySQL
+	$_SG['banco'] = 'teren671_bd_escola_teste';            // Banco de dados MySQL
 	
 
 	$_SG['paginaLogin'] = 'login.php'; // Página de login
@@ -47,8 +46,8 @@
 
 	// Verifica se precisa fazer a conexão com o MySQL
 	if ($_SG['conectaServidor'] == true) {
-		$_SG['link'] = mysql_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_SG['servidor']."].");
-		mysql_select_db($_SG['banco'], $_SG['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_SG['banco']."].");
+		$_SG['link'] = mysqli_connect($_SG['servidor'], $_SG['usuario'], $_SG['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_SG['servidor']."].");
+		mysqli_select_db($_SG['banco'], $_SG['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_SG['banco']."].");
 	}
 
 	// Verifica se precisa iniciar a sessão

@@ -85,14 +85,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-3 centro-vertical">
-				<img src="admin/imagens/menu/<?=$instituicao->getLogoPrincipal()?>" title="<?=$instituicao->getNome()?>" alt="Logo Principal" class="img-fluid mx-auto d-block logo-escola" />
+				<img src="admin/imagens/<?=$instituicao->getLogoPrincipal()?>" title="<?=$instituicao->getNome()?>" alt="Logo Principal" class="img-fluid mx-auto d-block logo-escola" />
 			</div>
 			<hgroup class="col-md-8 col-sm-6">
 				<h3 class="h1-escola"><?=$instituicao->getNome()?></h3>
 				<h6 class="slogan"><?=$instituicao->getSlogan()?></h6>
 			</hgroup>
 			<div class="col-md-2 col-sm-3 centro-vertical">
-				<img src="admin/imagens/menu/<?=$instituicao->getLogoPrincipal()?>" title="<?=$instituicao->getSlogan()?>" alt="Logo da Secundário" class="img-fluid mx-auto d-block logo-escola" />
+				<img src="admin/imagens/<?=$instituicao->getLogoSecundaria()?>" title="<?=$instituicao->getSlogan()?>" alt="Logo da Secundário" class="img-fluid mx-auto d-block logo-escola" />
 			</div>
 		</div>
 	</div>

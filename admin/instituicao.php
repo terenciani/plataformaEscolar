@@ -8,7 +8,6 @@
     
 
     if(isset($_POST['btn-enviar'])){
-      var_dump($_FILES);
       $controle->alterarDadosDaInstituicao($_POST, $_FILES);
     }
       

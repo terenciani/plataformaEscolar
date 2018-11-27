@@ -7,10 +7,10 @@
 	    private function __construct()
 	    {
 	        # Informações sobre o banco de dados:
-	        $db_host = "terenciani.com.br";
+	        $db_host = "localhost";
 	        $db_nome = "teren671_bd_escola_teste";
-	        $db_usuario = "teren671_admin";
-	        $db_senha = "152535";
+	        $db_usuario = "root";
+	        $db_senha = "";
 	        $db_driver = "mysql";
 	        # Informações sobre o sistema:
 	        $sistema_titulo = "Escola Estadual Waldemir Barros da Silva";

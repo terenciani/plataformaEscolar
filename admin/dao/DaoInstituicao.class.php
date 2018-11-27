@@ -77,7 +77,7 @@
 							)";
 
 				$p_sql = Conexao::getInstancia()->prepare($sql);
-				$p_sql->bindValue(":data", date('Y-m-d'));
+				$p_sql->bindValue(":data", date('Y-m-d h:i:s'));
 				$p_sql->bindValue(":nome", $dadosDoFormulario['nome']);
 				$p_sql->bindValue(":sigla", $dadosDoFormulario['sigla']);
 				$p_sql->bindValue(":logoPrincipal", $logoPrincipal);
@@ -99,8 +99,6 @@
 				$p_sql->bindValue(":temProfissional", $dadosDoFormulario['tem-profissional']);
 
 	          	$p_sql->execute();
-
-				echo $stmt->fullQuery;
 				
 	          	return $p_sql->rowCount();	
 			}catch (Exception $e) {
