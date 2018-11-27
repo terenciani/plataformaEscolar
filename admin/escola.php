@@ -1,14 +1,16 @@
+<?php
+  include_once ("controller/EscolaController.class.php");
+  $controle = new EscolaController();
+  
+  if(isset($_POST["alterar"])){  
+      $dados = $controle->buscaDados();
+     // echo $dados;
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <?php
     include_once("includes/head.php");
-    include_once ("controller/EscolaController.class.php");
-    $controle = new EscolaController();
-    
-    if(isset($_POST["alterar"])){  
-        $dados = $controle->buscaDados();
-       // echo $dados;
-    }
   ?>
   
 

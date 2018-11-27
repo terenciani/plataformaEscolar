@@ -1,20 +1,22 @@
+<?php
+  require_once 'includes/init.php';
+  include_once ("controller/InstituicaoController.class.php");
+  $controle = new InstituicaoController();
+  
+
+  if(isset($_POST['btn-enviar'])){
+    $controle->alterarDadosDaInstituicao($_POST, $_FILES);
+  }
+    
+  //break;
+    
+  $escola = $controle->getInstituicao();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <?php
-    require_once 'includes/init.php';
     include_once("includes/head.php");
-    include_once ("controller/InstituicaoController.class.php");
-    $controle = new InstituicaoController();
-    
-
-    if(isset($_POST['btn-enviar'])){
-      $controle->alterarDadosDaInstituicao($_POST, $_FILES);
-    }
-      
-    //break;
-      
-    $escola = $controle->getInstituicao();
-
   ?>
   
 

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<html lang="pt-br"><head>
-=======
- <?php
+<?php
   require_once 'includes/init.php';
   include_once LIB_CONTROLLER.DS.'EquipeController.class.php';
 
@@ -10,86 +7,20 @@
   if(isset($_POST['metodo'])){
     $msg = $controle->salvarEquipe($_POST, $_FILES);
   }
- ?>
- <html lang="pt-br"><head>
->>>>>>> b48cd21162ad20a2c27702e1723d0e54b521c96c
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>..:: Plataforma Escolar WBS ::..</title>
-    <!-- Bootstrap core CSS-->
-    <link href="components/bootstrap-4.0.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom fonts for this template-->
-    <link href="components/fontawesome-5.0.13/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
-    <!-- Custom styles for this template-->
-    
-    <link href="components/sbadmin/css/sb-admin.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/adm-estilo.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-confirm.css" type="text/css">
-    <link rel="shortcut icon" type="image/png" href="imagens/favicon.png">
-</head>  
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <?php
+    include_once("includes/head.php");
+  ?>
+  
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Plataforma Escolar WBS</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Início">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-home"></i>
-            <span class="nav-link-text">Início</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Notícias">
-          <a class="nav-link" href="noticia.php">
-            <i class="far fa-newspaper"></i>
-            <span class="nav-link-text">Notícias</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="banner.php">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Gerência de Banners</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link" href="escola.php">
-            <i class="fas fa-address-book"></i>
-            <span class="nav-link-text"> Gerência da Escola </span>
-          </a>
-
-<<<<<<< HEAD
-           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Equipe">
-=======
-           </li><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Equipe WBS">
->>>>>>> b48cd21162ad20a2c27702e1723d0e54b521c96c
-          <a class="nav-link" href="equipe.php">
-          <i class="fas fa-users-cog"></i>
-            <span class="nav-link-text">Gerência de Equipe</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Educação Profissional">
-          <a class="nav-link" href="profissional.php">
-            <i class="fas fa-graduation-cap"></i>
-            <span class="nav-link-text">Gerência de Educação Profissional</span>
-          </a>
-        </li>
-        
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#modalSair">
-            <i class="fa fa-fw fa-sign-out"></i>Sair</a>
-        </li>
-      </ul>
-    </ul></div>
-</nav>  <div class="content-wrapper">
+  <?php
+    include_once("includes/menu.php");
+  ?>
+  <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
